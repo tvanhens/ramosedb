@@ -4,7 +4,7 @@ import {
   FIRST_USER_EID,
   ValueTag,
   attributeDatoms,
-} from "../packages/ramose/src/internal/core/index.ts";
+} from "../packages/ramosedb/src/internal/core/index.ts";
 
 export const ATTR = {
   name: FIRST_USER_EID,

@@ -13,7 +13,7 @@ import {
   string,
   timestamp,
   uuid,
-} from "ramose/db";
+} from "ramosedb/db";
 
 export const OPERATION_DATABASES = Object.freeze([
   "operations-static",

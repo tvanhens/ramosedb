@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { signToken } from "../../packages/ramose/test/sign-local-token.ts";
+import { signToken } from "../../packages/ramosedb/test/sign-local-token.ts";
 import { recordingTransport, type RecordingTransport } from "../support/recorder.ts";
 import { attr, testAdmin, uniqueDb, type LocalUrls } from "./fixtures.ts";
 import { TEST_CAPABILITY } from "./test-hooks-env.ts";

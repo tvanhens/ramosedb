@@ -1,4 +1,4 @@
-import { Connection } from "../packages/ramose/src/internal/core/index.ts";
+import { Connection } from "../packages/ramosedb/src/internal/core/index.ts";
 import { fmt } from "./lib.ts";
 
 const N = Number(process.argv[2] ?? 5000);

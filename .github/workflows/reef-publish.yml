@@ -61,7 +61,7 @@ jobs:
             echo "::error::Need CLOUDFLARE_API_TOKEN (secret) and CLOUDFLARE_ACCOUNT_ID (variable or secret) on the Development environment. See CONTRIBUTING.md."
             exit 1
           fi
-          # `ramose`'s exports resolve `bun` → src but `default` → dist;
+          # `ramosedb`'s exports resolve `bun` → src but `default` → dist;
           # build-packages keeps every resolver on the same sources.
           bun run scripts/build-packages.ts
           # The SPA talks to both Workers at its own origin, so the deployed

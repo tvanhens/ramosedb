@@ -1,4 +1,4 @@
-import * as Ramose from "ramose";
+import * as Ramose from "ramosedb";
 import { TEST_HOOKS_ENV } from "./test-hooks-env.ts";
 
 export const Open = Ramose.Server("Open", {

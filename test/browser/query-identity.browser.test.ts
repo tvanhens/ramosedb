@@ -7,36 +7,36 @@ import {
   Ref,
   Schema,
   string,
-} from "../../packages/ramose/src/db/internal.ts";
+} from "../../packages/ramosedb/src/db/internal.ts";
 import {
   createClient,
   type Client,
   type ClientDatabase,
   type Subscription,
-} from "../../packages/ramose/src/client/index.ts";
-import { installClientCatalog } from "../../packages/ramose/src/client/catalog.ts";
+} from "../../packages/ramosedb/src/client/index.ts";
+import { installClientCatalog } from "../../packages/ramosedb/src/client/catalog.ts";
 import {
   isClientRef,
   type ClientRef,
   type EntityId as EntityIdentity,
-} from "../../packages/ramose/src/db/refs.ts";
-import { IndexedDbReplicaStorage } from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+} from "../../packages/ramosedb/src/db/refs.ts";
+import { IndexedDbReplicaStorage } from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import type {
   ReplicationIdentity,
   SnapshotDatom,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
 import {
   replicaDatabaseScopeOf,
   replicaScopeOf,
-} from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
-import { rootReplicaRouteSlot } from "../../packages/ramose/src/internal/replication/route-slot.ts";
+} from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
+import { rootReplicaRouteSlot } from "../../packages/ramosedb/src/internal/replication/route-slot.ts";
 import {
   replicationActivationAddress,
   replicationCacheSelector,
   replicationCredentialFingerprint,
-} from "../../packages/ramose/src/internal/replication/transport.ts";
+} from "../../packages/ramosedb/src/internal/replication/transport.ts";
 import { browserTest } from "./fixtures.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const Person = Entity("person", { name: Field.unique(string(), "strict") });
 

@@ -1,4 +1,4 @@
-import type { OperationCatalogProof } from "ramose/worker";
+import type { OperationCatalogProof } from "ramosedb/worker";
 import { catalogProof } from "./fixtures.ts";
 import { CONFORMANCE_DATABASES } from "./conformance-catalog.ts";
 

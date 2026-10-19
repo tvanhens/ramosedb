@@ -4,7 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { isReleaseVersion } from "./lib/version.ts";
 
-const PACKAGE_DIR = "packages/ramose";
+const PACKAGE_DIR = "packages/ramosedb";
 
 const REQUIRED_FIELDS = ["name", "version", "description", "license", "repository", "exports", "files"] as const;
 
@@ -112,7 +112,7 @@ if (checkBuilt) {
   const defaultResolved = resolveRamose([]);
   if (defaultResolved !== undefined && !defaultResolved.endsWith("/dist/index.js")) {
     errors.push(
-      `node import.meta.resolve("ramose") landed on ${defaultResolved}, ` +
+      `node import.meta.resolve("ramosedb") landed on ${defaultResolved}, ` +
         `expected …/dist/index.js`,
     );
   }
@@ -138,12 +138,12 @@ function shipsInTarball(target: string, files: string[]): boolean {
 
 function resolveRamose(extra: string[]): string | undefined {
   const result = Bun.spawnSync(
-    ["node", ...extra, "-e", 'console.log(import.meta.resolve("ramose"))'],
+    ["node", ...extra, "-e", 'console.log(import.meta.resolve("ramosedb"))'],
     { cwd: process.cwd() },
   );
   if (result.exitCode !== 0) {
     errors.push(
-      `node ${extra.join(" ")} import.meta.resolve("ramose") failed: ` +
+      `node ${extra.join(" ")} import.meta.resolve("ramosedb") failed: ` +
         `${result.stderr.toString().trim() || result.stdout.toString().trim()}`,
     );
     return undefined;

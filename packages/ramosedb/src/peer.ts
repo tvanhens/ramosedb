@@ -187,8 +187,8 @@ export const validatePeerWiring = (worker: unknown): string | undefined => {
   if (typeof main !== "string" || main === "") {
     return "ramose: the server Worker has no `main` — point it at a module that re-exports TransactorDO and QueryReplicaDO, or omit `worker` and let Ramose.Server resolve ramose/worker";
   }
-  if (main === "ramose/worker") {
-    return `ramose: main is the bare specifier "ramose/worker", which Alchemy resolves as a path and never finds. Use import.meta.resolve("ramose/worker") or omit \`worker\` so Ramose.Server calls workerEntry()`;
+  if (main === "ramosedb/worker") {
+    return `ramose: main is the bare specifier "ramosedb/worker", which Alchemy resolves as a path and never finds. Use import.meta.resolve("ramosedb/worker") or omit \`worker\` so Ramose.Server calls workerEntry()`;
   }
   try {
     resolveMainPath(main);

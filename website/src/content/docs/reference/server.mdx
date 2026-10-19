@@ -6,13 +6,13 @@ import Next from "../../../components/Next.astro";
 
 `Ramose.Server` provisions the Cloudflare data plane for one application: the public Worker, authoritative database writers, query execution, object storage, synchronization, optional MCP endpoint, and test-gated instrumentation.
 
-*New here? Start with [Deploy Ramose](/guides/deploy/).*
+*New here? Start with [Deploy RamoseDB](/guides/deploy/).*
 
 ## Resource declaration
 
 ```ts
 import * as Cloudflare from "alchemy/Cloudflare"
-import * as Ramose from "ramose"
+import * as Ramose from "ramosedb"
 
 const Store = Cloudflare.R2.Bucket("TasksStore", {
   name: "ramose-tasks-store",
@@ -34,7 +34,7 @@ import {
   createServer,
   createTransactorDO,
   deployOperationCatalogs,
-} from "ramose/worker"
+} from "ramosedb/worker"
 import { deployment } from "./domain"
 
 const operationCatalogs = await Effect.runPromise(

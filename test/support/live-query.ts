@@ -1,4 +1,4 @@
-import { parseJson, stringifyJson } from "../../packages/ramose/src/internal/core/json.ts";
+import { parseJson, stringifyJson } from "../../packages/ramosedb/src/internal/core/json.ts";
 
 export type LiveQueryDiff = {
   readonly added: readonly unknown[];

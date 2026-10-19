@@ -1,6 +1,6 @@
-# Contributing to Ramose
+# Contributing to RamoseDB
 
-Ramose uses Bun workspaces. The published package is `packages/ramose`, examples
+RamoseDB uses Bun workspaces. The published package is `packages/ramosedb`, examples
 are in `examples`, and public documentation is in `website/src/content/docs`.
 
 ## Reviewable changes
@@ -109,7 +109,7 @@ Documentation pull requests are previewed automatically. Pushes to `main` or
 
 ## Releases
 
-The package is built into `packages/ramose/dist` and published as `ramose`.
+The package is built into `packages/ramosedb/dist` and published as `ramosedb`.
 Use npm 11.5.1 or newer.
 
 ```sh

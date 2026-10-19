@@ -7,7 +7,7 @@
 <br />
 <br />
 
-[![npm](https://img.shields.io/npm/v/ramose?style=flat-square&color=FF6500&label=ramose)](https://www.npmjs.com/package/ramose)
+[![npm](https://img.shields.io/npm/v/ramosedb?style=flat-square&color=FF6500&label=ramosedb)](https://www.npmjs.com/package/ramosedb)
 [![license](https://img.shields.io/badge/license-Apache%202.0-FF6500?style=flat-square)](./LICENSE)
 [![docs](https://img.shields.io/badge/docs-ramose.ai-FF6500?style=flat-square)](https://ramose.ai)
 
@@ -35,33 +35,33 @@ authoritative Worker and storage topology into your account.
 - **Nothing overwritten.** Every version is kept; read the database as it was
   at any earlier point in time.
 - **Your Cloudflare account.** One Worker, Durable Objects, and R2, deployed
-  with [Alchemy](https://alchemy.run). No Ramose bill, no dashboard, no
+  with [Alchemy](https://alchemy.run). No RamoseDB bill, no dashboard, no
   managed service.
 
 ```sh
-bun add ramose effect@rc
+bun add ramosedb effect@rc
 ```
 
 `effect` is a required peer because operation input and output codecs are
-Effect Schemas. `alchemy` comes with Ramose for deploys. Apps using
-`ramose/better-auth` also need `better-auth` and `zod`.
+Effect Schemas. `alchemy` comes with RamoseDB for deploys. Apps using
+`ramosedb/better-auth` also need `better-auth` and `zod`.
 
 ## Learn more
 
 - [Review agent changes](https://ramose.ai/guides/changesets/) — prepare, preview, and approve durable proposals
 
-- [What is Ramose?](https://ramose.ai/getting-started/introduction/) — the one-minute version
+- [What is RamoseDB?](https://ramose.ai/getting-started/introduction/) — the one-minute version
 - [Mental model](https://ramose.ai/concepts/mental-model/) — databases, catalogs, queries, operations, and replicas
 - [Getting started](https://ramose.ai/getting-started/quickstart/) — build a small offline-first web app
 - [Connect an agent](https://ramose.ai/getting-started/connect-an-agent/) — use the same model through MCP
 - [How it compares](https://ramose.ai/getting-started/compare/) — against Convex, Supabase, Instant, Firebase, and D1
 
-> **Ramose is pre-release.** The API moves between releases, so pin exact
+> **RamoseDB is pre-release.** The API moves between releases, so pin exact
 > versions. Issues and pull requests are welcome.
 
 ## Contributing
 
-Ramose itself is a Bun monorepo — `bun install && bun run test`. See
+RamoseDB itself is a Bun monorepo — `bun install && bun run test`. See
 [CONTRIBUTING.md](./CONTRIBUTING.md) for unit vs local vs Cloudflare e2e.
 
 ## License

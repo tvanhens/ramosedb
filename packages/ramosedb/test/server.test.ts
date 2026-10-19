@@ -212,7 +212,7 @@ describe("escape-hatch wiring", () => {
   });
 
   test("the bare specifier is refused", () => {
-    expect(validatePeerWiring(peer(dos, "ramose/worker"))).toMatch(/bare specifier/);
+    expect(validatePeerWiring(peer(dos, "ramosedb/worker"))).toMatch(/bare specifier/);
   });
 
   test("a main that does not resolve is refused", () => {

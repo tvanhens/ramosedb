@@ -1,8 +1,8 @@
 import { beforeAll, describe, expect, test } from "bun:test";
 import * as Result from "effect/Result";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import { signToken } from "../../packages/ramose/test/sign-local-token.ts";
-import { isEntityId } from "../../packages/ramose/src/db/refs.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import { signToken } from "../../packages/ramosedb/test/sign-local-token.ts";
+import { isEntityId } from "../../packages/ramosedb/src/db/refs.ts";
 import {
   applyReplicationFrame,
   decodeReplicationFrame,
@@ -10,7 +10,7 @@ import {
   readReplicationFrames,
   type ClientReplicationState,
   type ReplicationFrame,
-} from "../../packages/ramose/src/internal/replication/index.ts";
+} from "../../packages/ramosedb/src/internal/replication/index.ts";
 import {
   applyObservedFrame,
   collectCommittedSnapshot,

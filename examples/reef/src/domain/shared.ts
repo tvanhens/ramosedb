@@ -1,5 +1,5 @@
-import type { AuthConfig } from "ramose";
-import { isDatabaseName } from "ramose/db";
+import type { AuthConfig } from "ramosedb";
+import { isDatabaseName } from "ramosedb/db";
 
 export const REEF_AUTH: AuthConfig = {
   issuer: "reef-demo-auth",

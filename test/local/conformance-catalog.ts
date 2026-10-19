@@ -8,12 +8,12 @@ import {
   ref,
   Schema,
   string,
-} from "ramose/db";
+} from "ramosedb/db";
 import {
   assembleCatalogDefinitions,
   DigestHex,
   hashReadCompatibility,
-} from "../../packages/ramose/src/internal/authorization/index.ts";
+} from "../../packages/ramosedb/src/internal/authorization/index.ts";
 
 export const CONFORMANCE_DATABASES = Object.freeze([
   "conformance-world-a",

@@ -1,19 +1,19 @@
-import { IndexedDbReplicaStorage } from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+import { IndexedDbReplicaStorage } from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import {
   platformLocks,
   replicaLeaderKey,
   SyncLeadership,
-} from "../../packages/ramose/src/internal/replication/leadership.ts";
-import type { ReplicaDatabaseScope } from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
+} from "../../packages/ramosedb/src/internal/replication/leadership.ts";
+import type { ReplicaDatabaseScope } from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
 import {
   armCheckpoint,
   checkpointStatus,
   testRuntimeBoundaries,
-} from "../../packages/ramose/src/internal/test-hooks.ts";
-import type { ReplicationIdentity } from "../../packages/ramose/src/internal/replication/protocol.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
-import type { OutboxDraft } from "../../packages/ramose/src/internal/replication/outbox.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+} from "../../packages/ramosedb/src/internal/test-hooks.ts";
+import type { ReplicationIdentity } from "../../packages/ramosedb/src/internal/replication/protocol.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
+import type { OutboxDraft } from "../../packages/ramosedb/src/internal/replication/outbox.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 import { serveTab } from "./tab-harness.ts";
 
 type Standing = {

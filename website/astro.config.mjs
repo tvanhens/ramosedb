@@ -18,7 +18,7 @@ export default defineConfig({
 
   integrations: [
     localSearch(starlight({
-      title: "Ramose",
+      title: "RamoseDB",
 
       description:
         "One offline-first database for your app and its agents, with generated MCP tools and exactly the same permissions for both.",
@@ -38,7 +38,7 @@ export default defineConfig({
           attrs: {
             property: "og:image:alt",
             content:
-              "Ramose — the database optimized for humans and agents",
+              "RamoseDB — the database optimized for humans and agents",
           },
         },
         {
@@ -53,11 +53,11 @@ export default defineConfig({
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/tvanhens/ramose",
+          href: "https://github.com/tvanhens/ramosedb",
         },
       ],
       editLink: {
-        baseUrl: "https://github.com/tvanhens/ramose/edit/master/website/",
+        baseUrl: "https://github.com/tvanhens/ramosedb/edit/master/website/",
       },
       customCss: [
         "@fontsource-variable/manrope",
@@ -94,7 +94,7 @@ export default defineConfig({
         {
           label: "Start here",
           items: [
-            { label: "What is Ramose", slug: "getting-started/introduction" },
+            { label: "What is RamoseDB", slug: "getting-started/introduction" },
             { label: "Mental model", slug: "concepts/mental-model" },
             { label: "Build a web app", slug: "getting-started/quickstart" },
             { label: "Connect an agent", slug: "getting-started/connect-an-agent" },

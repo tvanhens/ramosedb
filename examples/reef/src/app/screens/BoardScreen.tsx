@@ -1,9 +1,9 @@
 import { ChangesetPanel } from "../components/ChangesetPanel.tsx";
 import { useEffect, useMemo, useState } from "react";
-import type { Changeset, DatabaseView } from "ramose/client";
-import { useChangesets, useDb, useQuery, useSuspenseQuery } from "ramose/react";
+import type { Changeset, DatabaseView } from "ramosedb/client";
+import { useChangesets, useDb, useQuery, useSuspenseQuery } from "ramosedb/react";
 import { useMutationFeedback } from "../MutationFeedback.tsx";
-import type { EntityHandleFor } from "ramose/client";
+import type { EntityHandleFor } from "ramosedb/client";
 import { Workspace } from "../../domain/schema.ts";
 import { personLabel, type IssueRow, type PersonRow, type Member } from "../entities.ts";
 import {

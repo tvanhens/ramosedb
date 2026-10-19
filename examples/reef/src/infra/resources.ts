@@ -1,4 +1,4 @@
-import * as Ramose from "ramose";
+import * as Ramose from "ramosedb";
 import * as Cloudflare from "alchemy/Cloudflare";
 import { Api } from "./api.ts";
 import { pinned } from "./domain.ts";

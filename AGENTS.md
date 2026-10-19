@@ -1,7 +1,7 @@
-# Ramose
+# RamoseDB
 
-Ramose is a Bun workspace. The published `ramose` package is in
-`packages/ramose`; consumer examples are in `examples`.
+RamoseDB is a Bun workspace. The published `ramosedb` package is in
+`packages/ramosedb`; consumer examples are in `examples`.
 
 Use `README.md` for the product overview and `CONTRIBUTING.md` for development
 commands. Public documentation is published at [ramose.ai](https://ramose.ai)

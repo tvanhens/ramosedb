@@ -1,15 +1,15 @@
 import { describe, expect, test } from "bun:test";
 import { join } from "node:path";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
 import type {
   LogicalDatom,
   ReplicationIdentity,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
 import {
   collectCommittedSnapshot,
   readReplicationNdjson,
 } from "../support/replication.ts";
-import { signToken } from "../../packages/ramose/test/sign-local-token.ts";
+import { signToken } from "../../packages/ramosedb/test/sign-local-token.ts";
 import { CONFORMANCE_DATABASES } from "./conformance-catalog.ts";
 import {
   ConformanceIssue,

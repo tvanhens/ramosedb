@@ -1,5 +1,5 @@
 import * as Effect from "effect/Effect";
-import { Schema } from "ramose/db";
+import { Schema } from "ramosedb/db";
 import {
   createServer,
   createTransactorDO,
@@ -7,7 +7,7 @@ import {
   type DeployOperationCatalogsInput,
   type OperationCatalogDeploymentError,
   type OperationCatalogs,
-} from "ramose/worker";
+} from "ramosedb/worker";
 
 const Empty = Schema("consumer-operations", {});
 Empty.applyPolicy(() => {});

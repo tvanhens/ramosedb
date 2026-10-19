@@ -1,11 +1,11 @@
 ---
 title: Data model
-description: Ramose stores typed facts over time, groups them into entities and traits, and connects them with references.
+description: RamoseDB stores typed facts over time, groups them into entities and traits, and connects them with references.
 ---
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
 
-Ramose presents records in application code, but its durable model is a set of typed facts: one entity, one field, one value, and the period during which that statement is true. Updating a single-value field closes the old statement and adds a new one; it does not overwrite history.
+RamoseDB presents records in application code, but its durable model is a set of typed facts: one entity, one field, one value, and the period during which that statement is true. Updating a single-value field closes the old statement and adds a new one; it does not overwrite history.
 
 <Learn learn={["How entities, fields, traits, references, and history relate", "Why composition is not inheritance", "Which identities become durable contracts"]} before={[{ href: "/concepts/mental-model/", label: "Mental model" }]} minutes={9} />
 

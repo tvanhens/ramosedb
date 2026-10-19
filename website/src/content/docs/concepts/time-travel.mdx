@@ -5,7 +5,7 @@ description: Read immutable database values as of an earlier version, inspect ch
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
 
-Ramose never overwrites the history of a field. Every committed operation produces a new immutable database value. Current reads use the latest value; temporal queries select another view over the same database.
+RamoseDB never overwrites the history of a field. Every committed operation produces a new immutable database value. Current reads use the latest value; temporal queries select another view over the same database.
 
 <Learn learn={["The difference between current, as-of, and history views", "Why current policy governs historical data", "Which recovery and audit workflows temporal queries support"]} before={[{ href: "/concepts/data-model/", label: "Data model" }]} minutes={6} />
 

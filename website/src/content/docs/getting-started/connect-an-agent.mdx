@@ -6,11 +6,11 @@ import Learn from "../../../components/Learn.astro";
 import SurfaceMap from "../../../components/SurfaceMap.astro";
 import Next from "../../../components/Next.astro";
 
-Every Ramose deployment exposes an MCP endpoint at `POST /db/<root>/mcp`. It lists `describe`, `query`, `mutate`, and `changeset`. Restricted agent credentials omit `mutate`; [changesets](/guides/changesets/) let them prepare work for human approval.
+Every RamoseDB deployment exposes an MCP endpoint at `POST /db/<root>/mcp`. It lists `describe`, `query`, `mutate`, and `changeset`. Restricted agent credentials omit `mutate`; [changesets](/guides/changesets/) let them prepare work for human approval.
 
-This guide connects to the task app from [Build your first Ramose web app](/getting-started/quickstart/).
+This guide connects to the task app from [Build your first RamoseDB web app](/getting-started/quickstart/).
 
-<Learn learn={["How a stock MCP client authenticates to Ramose", "How an agent discovers a schema it has never seen", "How query and mutate reuse the application's policy and operations"]} before={[{ href: "/getting-started/quickstart/", label: "Build the starter app" }]} minutes={12} />
+<Learn learn={["How a stock MCP client authenticates to RamoseDB", "How an agent discovers a schema it has never seen", "How query and mutate reuse the application's policy and operations"]} before={[{ href: "/getting-started/quickstart/", label: "Build the starter app" }]} minutes={12} />
 
 <SurfaceMap />
 
@@ -22,7 +22,7 @@ In your MCP client, add a Streamable HTTP server with the starter's URL:
 https://your-ramose-origin.example/db/tasks/mcp
 ```
 
-Ramose publishes OAuth protected-resource metadata, so clients that support remote MCP authentication can discover the authorization server and start sign-in. The resulting bearer token represents one principal and one authorized root; the client never chooses an internal database or catalog.
+RamoseDB publishes OAuth protected-resource metadata, so clients that support remote MCP authentication can discover the authorization server and start sign-in. The resulting bearer token represents one principal and one authorized root; the client never chooses an internal database or catalog.
 
 For a client that accepts static configuration, the shape is typically:
 
@@ -106,7 +106,7 @@ Suppose the query returned task `task_01H…`. The agent marks it done by invoki
 }
 ```
 
-`mutate` does not expose raw writes. Ramose re-resolves the operation, target visibility, input schema, and grant at execution time. An identical retry with the same `invocationId` returns the original result and receipt. Reusing that id for different input returns `invocation_conflict`.
+`mutate` does not expose raw writes. RamoseDB re-resolves the operation, target visibility, input schema, and grant at execution time. An identical retry with the same `invocationId` returns the original result and receipt. Reusing that id for different input returns `invocation_conflict`.
 
 ## 5. Watch the app converge
 

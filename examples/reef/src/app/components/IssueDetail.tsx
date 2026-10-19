@@ -1,8 +1,8 @@
 import { useMutationFeedback } from "../MutationFeedback.tsx";
 import { useEffect, useState } from "react";
-import type { ClientDatabase } from "ramose/client";
-import type { MutationRef } from "ramose/db";
-import { useQuery } from "ramose/react";
+import type { ClientDatabase } from "ramosedb/client";
+import type { MutationRef } from "ramosedb/db";
+import { useQuery } from "ramosedb/react";
 import { boardLabels, issueComments } from "../../domain/queries.ts";
 import {
   PRIORITIES,

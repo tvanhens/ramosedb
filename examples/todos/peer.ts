@@ -1,4 +1,4 @@
-import { createServer } from "ramose/worker";
+import { createServer } from "ramosedb/worker";
 
 export default createServer();
-export { QueryReplicaDO, TransactorDO } from "ramose/worker";
+export { QueryReplicaDO, TransactorDO } from "ramosedb/worker";

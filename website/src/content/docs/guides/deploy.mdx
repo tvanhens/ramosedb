@@ -1,11 +1,11 @@
 ---
-title: Deploy Ramose
-description: Deploy a Ramose Server with Alchemy, separate stages, install the catalog safely, and verify the browser and MCP endpoints.
+title: Deploy RamoseDB
+description: Deploy a RamoseDB Server with Alchemy, separate stages, install the catalog safely, and verify the browser and MCP endpoints.
 ---
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
 
-Ramose deploys as a Cloudflare data plane declared in the same TypeScript stack as your application. Use separate Alchemy stages for development, preview, and production.
+RamoseDB deploys as a Cloudflare data plane declared in the same TypeScript stack as your application. Use separate Alchemy stages for development, preview, and production.
 
 <Learn learn={["What Ramose.Server provisions", "How stages separate storage and identity configuration", "How to deploy and verify without weakening authorization"]} before={[{ href: "/getting-started/quickstart/", label: "Build the starter app" }]} minutes={10} />
 
@@ -16,7 +16,7 @@ import * as Alchemy from "alchemy"
 import * as Cloudflare from "alchemy/Cloudflare"
 import * as Effect from "effect/Effect"
 import * as Layer from "effect/Layer"
-import * as Ramose from "ramose"
+import * as Ramose from "ramosedb"
 import { auth } from "./src/auth.ts"
 
 const Store = Cloudflare.R2.Bucket("TasksStore", {
@@ -50,7 +50,7 @@ import {
   createServer,
   createTransactorDO,
   deployOperationCatalogs,
-} from "ramose/worker"
+} from "ramosedb/worker"
 import { deployment } from "./src/domain.ts"
 
 const operationCatalogs = await Effect.runPromise(
@@ -115,6 +115,6 @@ Destroying a stage removes the resources Alchemy owns and may delete its databas
 
 <Next links={[
   { href: "/guides/before-production/", label: "Before production", why: "complete the launch, recovery, and security checklist" },
-  { href: "/guides/workers/", label: "Use Ramose from a Worker", why: "add trusted server-side workflows without another data model" },
+  { href: "/guides/workers/", label: "Use RamoseDB from a Worker", why: "add trusted server-side workflows without another data model" },
   { href: "/reference/server/", label: "Server reference", why: "review routes, lifecycle, limits, and observability" },
 ]} />

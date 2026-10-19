@@ -1,29 +1,29 @@
 import { expect } from "vitest";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import { Index } from "../../packages/ramose/src/internal/core/datom.ts";
-import type { Db } from "../../packages/ramose/src/internal/core/db.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import { Index } from "../../packages/ramosedb/src/internal/core/datom.ts";
+import type { Db } from "../../packages/ramosedb/src/internal/core/db.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
 import {
   IndexedDbReplicaStorage,
   REPLICA_DATABASE_VERSION,
   REPLICA_MANIFEST_STORAGE_VERSION,
   replicaPartitionKey,
   type ReplicaCacheCandidate,
-} from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+} from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import type {
   ReplicationIdentity,
   SnapshotDatom,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
 import {
   ReplicationSession,
   classifyReplicationCandidateFrame,
-} from "../../packages/ramose/src/internal/replication/session.ts";
+} from "../../packages/ramosedb/src/internal/replication/session.ts";
 import {
   replicationActivationAddress,
   replicationCacheSelector,
   replicationCredentialFingerprint,
-} from "../../packages/ramose/src/internal/replication/transport.ts";
-import { rootReplicaRouteSlot } from "../../packages/ramose/src/internal/replication/route-slot.ts";
+} from "../../packages/ramosedb/src/internal/replication/transport.ts";
+import { rootReplicaRouteSlot } from "../../packages/ramosedb/src/internal/replication/route-slot.ts";
 import {
   REPLICA_CLEAR_BARRIER_KEY,
   REPLICA_GENERATIONS_STORE,
@@ -31,23 +31,23 @@ import {
   replicaDatabaseScopeOf,
   replicaScopeKey,
   replicaScopeOf,
-} from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
+} from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
 import {
   createMutationStores,
   MUTATION_OUTBOX,
   MUTATION_QUEUES,
   MUTATION_RECEIPTS,
-} from "../../packages/ramose/src/internal/replication/outbox-storage.ts";
+} from "../../packages/ramosedb/src/internal/replication/outbox-storage.ts";
 import {
   buildOutboxRecord,
   buildQueueCursor,
   buildReceipt,
   mutationPartitionKey,
-} from "../../packages/ramose/src/internal/replication/outbox.ts";
-import { invocationId } from "../../packages/ramose/src/db/refs.ts";
-import type { OperationVersion } from "../../packages/ramose/src/internal/authorization/identities.ts";
+} from "../../packages/ramosedb/src/internal/replication/outbox.ts";
+import { invocationId } from "../../packages/ramosedb/src/db/refs.ts";
+import type { OperationVersion } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
 import { browserTest } from "./fixtures.ts";
-import { snapshotChunk, changeFrame } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk, changeFrame } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const opaque = (character: string): string => character.repeat(43);
 const selected: ReplicationIdentity = {

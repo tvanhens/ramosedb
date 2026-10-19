@@ -26,7 +26,7 @@ query
   .where(Query.gte(Task.createdAt, since))
 ```
 
-Import `Query` from `ramose/db`. The object form expresses equality; query stages such as `Query.gte`, `Query.startsWith`, and `Query.not` express other filters. Multiple stages passed to `.where` must all match.
+Import `Query` from `ramosedb/db`. The object form expresses equality; query stages such as `Query.gte`, `Query.startsWith`, and `Query.not` express other filters. Multiple stages passed to `.where` must all match.
 
 ### Filtering by an entity
 

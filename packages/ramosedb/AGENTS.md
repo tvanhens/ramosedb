@@ -1,10 +1,10 @@
-# Ramose Package
+# RamoseDB Package
 
 ## Code Review Rules
 
 ### Pre-release compatibility
 
-Ramose is pre-release, so breaking changes to existing APIs and formats are
+RamoseDB is pre-release, so breaking changes to existing APIs and formats are
 acceptable. Prefer direct replacement over compatibility layers. Block only
 when a change could strand durable user data or break a known consumer.
 

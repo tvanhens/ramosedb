@@ -1,32 +1,32 @@
 import { expect } from "vitest";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import { Index } from "../../packages/ramose/src/internal/core/datom.ts";
-import type { Db } from "../../packages/ramose/src/internal/core/db.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
-import { IndexedDbReplicaStorage } from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import { Index } from "../../packages/ramosedb/src/internal/core/datom.ts";
+import type { Db } from "../../packages/ramosedb/src/internal/core/db.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
+import { IndexedDbReplicaStorage } from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import {
   replicaDatabaseKey,
   replicaDatabaseScopeOf,
   replicaScopeKey,
   replicaScopeOf,
-} from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
+} from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
 import type {
   ReplicationIdentity,
   SnapshotDatom,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
-import { ReplicationSession } from "../../packages/ramose/src/internal/replication/session.ts";
-import { rootReplicaRouteSlot } from "../../packages/ramose/src/internal/replication/route-slot.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
+import { ReplicationSession } from "../../packages/ramosedb/src/internal/replication/session.ts";
+import { rootReplicaRouteSlot } from "../../packages/ramosedb/src/internal/replication/route-slot.ts";
 import {
   replicationActivationAddress,
   replicationCredentialFingerprint,
-} from "../../packages/ramose/src/internal/replication/transport.ts";
+} from "../../packages/ramosedb/src/internal/replication/transport.ts";
 import {
   armCheckpoint,
   resetTestHooks,
   testRuntimeBoundaries,
-} from "../../packages/ramose/src/internal/test-hooks.ts";
+} from "../../packages/ramosedb/src/internal/test-hooks.ts";
 import { browserTest } from "./fixtures.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const opaque = (character: string): string => character.repeat(43);
 

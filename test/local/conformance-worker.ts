@@ -1,10 +1,10 @@
 import * as Effect from "effect/Effect";
-import { deployOperationCatalogs } from "ramose/worker";
+import { deployOperationCatalogs } from "ramosedb/worker";
 import {
   QueryReplicaDO,
   createServer,
   createTransactorDO,
-} from "../../packages/ramose/src/worker/testing.ts";
+} from "../../packages/ramosedb/src/worker/testing.ts";
 import { conformanceCatalogDeployment } from "./conformance-catalog.ts";
 
 const operationCatalogs = await Effect.runPromise(

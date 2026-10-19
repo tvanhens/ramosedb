@@ -2,8 +2,8 @@ import { BetterAuth } from "@alchemy.run/better-auth";
 import { CloudflareD1 } from "@alchemy.run/better-auth/CloudflareD1";
 import * as Cloudflare from "alchemy/Cloudflare";
 import { jwt } from "better-auth/plugins/jwt";
-import type { AuthConfig } from "ramose";
-import { type ClassOf, ramoseToken } from "ramose/better-auth";
+import type { AuthConfig } from "ramosedb";
+import { type ClassOf, ramoseToken } from "ramosedb/better-auth";
 
 export const AUTH: AuthConfig = {
   issuer: "test-auth",

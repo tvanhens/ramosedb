@@ -1,6 +1,6 @@
 import * as Cloudflare from "alchemy/Cloudflare";
 import * as Effect from "effect/Effect";
-import { serverBinding } from "ramose";
+import { serverBinding } from "ramosedb";
 import { Api } from "./api.ts";
 import { Server } from "./resources.ts";
 import { REEF_DOMAIN, pinned } from "./domain.ts";

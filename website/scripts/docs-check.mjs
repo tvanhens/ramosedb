@@ -325,8 +325,8 @@ for (const page of pages) {
       if (/main:\s*["'`]ramose\/worker["'`]/.test(b.code) &&
           !b.code.includes("import.meta.resolve")) {
         add("ERROR", "code", page.slug,
-          'main: "ramose/worker" resolves to nothing and hangs silently',
-          'use import.meta.resolve("ramose/worker"), or show both to contrast them');
+          'main: "ramosedb/worker" resolves to nothing and hangs silently',
+          'use import.meta.resolve("ramosedb/worker"), or show both to contrast them');
       }
     }
     for (const b of blocks) {

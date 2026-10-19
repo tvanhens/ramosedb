@@ -3,8 +3,8 @@ import {
   type R2Like,
   dbPrefix,
   prefixedBucket,
-} from "../packages/ramose/src/internal/storage/index.ts";
-import { MemoryBucket } from "../packages/ramose/src/internal/storage/memory.ts";
+} from "../packages/ramosedb/src/internal/storage/index.ts";
+import { MemoryBucket } from "../packages/ramosedb/src/internal/storage/memory.ts";
 import {
   DEFAULT_CONFIG,
   type SocketLike,
@@ -12,7 +12,7 @@ import {
   type TransactorConfig,
   type TransactorHost,
   Transactor,
-} from "../packages/ramose/src/internal/transactor/index.ts";
+} from "../packages/ramosedb/src/internal/transactor/index.ts";
 
 export class BenchSocket implements SocketLike {
   readonly frames: any[] = [];

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { Entity, Query, Schema, boolean, string, type Row } from "ramose/db";
+import { Entity, Query, Schema, boolean, string, type Row } from "ramosedb/db";
 import { compositionFromSchema, lowerQueryObject, schemaTx, type Equal, type Expect } from "../../src/db/internal.ts";
 import { Connection } from "../../src/internal/core/conn.ts";
 import { query as runQuery } from "../../src/internal/core/query/engine.ts";

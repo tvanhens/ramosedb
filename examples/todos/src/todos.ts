@@ -1,4 +1,4 @@
-import * as Ramose from "ramose/db";
+import * as Ramose from "ramosedb/db";
 import { Todo } from "../schema.ts";
 
 export const todoShape = {

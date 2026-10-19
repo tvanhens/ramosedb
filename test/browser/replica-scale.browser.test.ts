@@ -1,22 +1,22 @@
 import { expect } from "vitest";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import { Index, ValueTag, datom } from "../../packages/ramose/src/internal/core/datom.ts";
-import type { Db } from "../../packages/ramose/src/internal/core/db.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import { Index, ValueTag, datom } from "../../packages/ramosedb/src/internal/core/datom.ts";
+import type { Db } from "../../packages/ramosedb/src/internal/core/db.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
 import {
   IndexedDbReplicaStorage,
   replicaPartitionKey,
   type ReplicaWriteCounts,
-} from "../../packages/ramose/src/internal/replication/indexeddb.ts";
-import { entityIdScopeOf } from "../../packages/ramose/src/internal/replication/identity.ts";
+} from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
+import { entityIdScopeOf } from "../../packages/ramosedb/src/internal/replication/identity.ts";
 import {
   makeLogicalIdentityEncoder,
   projectLogicalValueParts,
-} from "../../packages/ramose/src/internal/replication/logical.ts";
+} from "../../packages/ramosedb/src/internal/replication/logical.ts";
 import {
   generateServerIdentityRoot,
   sealingKeyOf,
-} from "../../packages/ramose/src/internal/replication/server-identity.ts";
+} from "../../packages/ramosedb/src/internal/replication/server-identity.ts";
 import {
   MAX_REPLICATION_DATOMS_PER_CHANGE,
   MAX_REPLICATION_DATOMS_PER_SNAPSHOT_CHUNK,
@@ -24,18 +24,18 @@ import {
   type EntityHandleBinding,
   type ReplicationIdentity,
   type SnapshotDatom,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
 import {
   armCheckpointThrow,
   resetTestHooks,
   testRuntimeBoundaries,
-} from "../../packages/ramose/src/internal/test-hooks.ts";
+} from "../../packages/ramosedb/src/internal/test-hooks.ts";
 import { browserTest } from "./fixtures.ts";
 import {
   changeFrame,
   sealedHandle,
   snapshotChunk,
-} from "../../packages/ramose/test/replication-fixtures.ts";
+} from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const BUDGET_10K_COLD_MS = 15_000;
 

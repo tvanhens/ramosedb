@@ -1,6 +1,6 @@
-import * as InternalOperations from "../../packages/ramose/src/db/Operation.ts";
+import * as InternalOperations from "../../packages/ramosedb/src/db/Operation.ts";
 import * as Schema from "effect/Schema";
-import * as Ramose from "ramose/db";
+import * as Ramose from "ramosedb/db";
 import {
   addReefIssue,
   addReefUser,

@@ -36,7 +36,7 @@ If the server reports `invocation_conflict`, the caller reused an id with a diff
 
 ## Optimistic state rolls back
 
-Observe the receipt. The server may reject because authorization changed, the target disappeared, input violated a current invariant, or the operation body returned a domain rejection. Ramose removes that optimistic layer and reapplies later layers.
+Observe the receipt. The server may reject because authorization changed, the target disappeared, input violated a current invariant, or the operation body returned a domain rejection. RamoseDB removes that optimistic layer and reapplies later layers.
 
 Show the public reason and authoritative state. Preserve user-authored input when offering a corrected new action.
 
@@ -76,7 +76,7 @@ This repository expects a version suffix containing `effect-tsgo`. If it prints 
 
 ## What to include in a bug report
 
-Include the Ramose and TypeScript versions, deployment stage kind, failing surface, public error tag/code, safe correlation id, catalog change involved, and the smallest catalog/query/operation that reproduces the failure. Remove tokens, internal ids, and user data.
+Include the RamoseDB and TypeScript versions, deployment stage kind, failing surface, public error tag/code, safe correlation id, catalog change involved, and the smallest catalog/query/operation that reproduces the failure. Remove tokens, internal ids, and user data.
 
 <Next links={[
   { href: "/reference/errors/", label: "Errors reference", why: "map every public error to caller recovery" },

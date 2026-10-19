@@ -14,12 +14,12 @@ const manifest = JSON.parse(
 };
 
 const PUBLIC = [
-  "ramose",
-  "ramose/db",
-  "ramose/client",
-  "ramose/react",
-  "ramose/worker",
-  "ramose/better-auth",
+  "ramosedb",
+  "ramosedb/db",
+  "ramosedb/client",
+  "ramosedb/react",
+  "ramosedb/worker",
+  "ramosedb/better-auth",
 ] as const;
 
 const CUT = [
@@ -45,7 +45,7 @@ const CUT = [
 
 const resolve = (spec: string): string => Bun.resolveSync(spec, import.meta.path);
 
-describe("the `ramose` exports map", () => {
+describe("the `ramosedb` exports map", () => {
   test("public barrels resolve", () => {
     for (const spec of PUBLIC) {
       expect(() => resolve(spec)).not.toThrow();
@@ -70,7 +70,7 @@ describe("the `ramose` exports map", () => {
     expect(root!.bun).toBeUndefined();
     expect(root!.default).toBe("./dist/index.js");
     for (const spec of PUBLIC) {
-      const entry = spec === "ramose" ? "." : `.${spec.slice("ramose".length)}`;
+      const entry = spec === "ramosedb" ? "." : `.${spec.slice("ramosedb".length)}`;
       expect(manifest.exports[entry]?.bun).toBeUndefined();
     }
   });

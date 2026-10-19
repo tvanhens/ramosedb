@@ -1,6 +1,6 @@
 import * as Schema from "effect/Schema";
-import * as Ramose from "ramose/db";
-import * as InternalOperations from "../../packages/ramose/src/db/Operation.ts";
+import * as Ramose from "ramosedb/db";
+import * as InternalOperations from "../../packages/ramosedb/src/db/Operation.ts";
 import { Todo } from "../../examples/todos/schema.ts";
 
 export const addTodoOp = InternalOperations.Operation(

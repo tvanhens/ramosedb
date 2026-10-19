@@ -7,7 +7,7 @@ import Next from "../../../components/Next.astro";
 
 Server rendering and offline replication solve different problems. The server can produce an authorized first response; the browser still restores and synchronizes its persistent database replica after hydration.
 
-<Learn learn={["Where server queries are useful", "Why an HTML payload is not a replica snapshot", "How to avoid mixing principals or hiding stale state"]} before={[{ href: "/guides/workers/", label: "Use Ramose from a Worker" }, { href: "/guides/react/", label: "React and offline UX" }]} minutes={7} />
+<Learn learn={["Where server queries are useful", "Why an HTML payload is not a replica snapshot", "How to avoid mixing principals or hiding stale state"]} before={[{ href: "/guides/workers/", label: "Use RamoseDB from a Worker" }, { href: "/guides/react/", label: "React and offline UX" }]} minutes={7} />
 
 ## Choose what the server owns
 
@@ -17,7 +17,7 @@ Do not create a browser `Db` handle in a Server Component. It depends on browser
 
 ## Query with the request principal
 
-Ramose does not currently export a server database client or a `ramose.open` function. Use the [MCP protocol](/reference/mcp/) for supported server queries, with the request’s verified authorization. Render the resulting plain data through your application framework.
+RamoseDB does not currently export a server database client or a `ramose.open` function. Use the [MCP protocol](/reference/mcp/) for supported server queries, with the request’s verified authorization. Render the resulting plain data through your application framework.
 
 Keep personalized results scoped to the principal and request. Do not put them in a shared framework cache without authorization-aware keys.
 

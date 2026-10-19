@@ -1,13 +1,13 @@
 ---
 title: Effect boundary
-description: Where Ramose uses Effect for deployment and orchestration, and where application authoring remains inert TypeScript data.
+description: Where RamoseDB uses Effect for deployment and orchestration, and where application authoring remains inert TypeScript data.
 ---
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
 
 Most application code does not need to learn Effect. Schemas, queries, policy rules, optimistic projections, and operation bodies are ordinary typed values. React uses subscriptions and event-handler methods.
 
-<Learn learn={["Where Effect appears in a Ramose project", "Why policy and query authoring stay inert", "How the Alchemy stack composes providers once"]} before={[{ href: "/getting-started/quickstart/", label: "Build a web app" }]} minutes={5} />
+<Learn learn={["Where Effect appears in a RamoseDB project", "Why policy and query authoring stay inert", "How the Alchemy stack composes providers once"]} before={[{ href: "/getting-started/quickstart/", label: "Build a web app" }]} minutes={5} />
 
 ## Where Effect appears
 
@@ -55,7 +55,7 @@ That separation makes the same declarations portable to browser type checking, s
 Worker-side application integrations may return or compose Effects around external services, but the final database change still goes through the owned operation boundary. Put retries, timeouts, logging, and spans around service calls; do not retry a committed operation by inventing a second invocation identity.
 
 <Next links={[
-  { href: "/guides/deploy/", label: "Deploy", why: "compose the Cloudflare and Ramose providers" },
+  { href: "/guides/deploy/", label: "Deploy", why: "compose the Cloudflare and RamoseDB providers" },
   { href: "/concepts/operations/", label: "Operations", why: "see the deterministic write boundary" },
   { href: "/reference/server/", label: "Server reference", why: "deployment and runtime configuration" },
 ]} />

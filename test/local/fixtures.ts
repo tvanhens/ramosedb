@@ -4,12 +4,12 @@ import * as Cloudflare from "alchemy/Cloudflare";
 import * as Test from "alchemy/Test/Bun";
 import * as Effect from "effect/Effect";
 import * as Layer from "effect/Layer";
-import * as Ramose from "ramose";
+import * as Ramose from "ramosedb";
 import Stack from "./alchemy.run.ts";
 import { TEST_CAPABILITY } from "./test-hooks-env.ts";
 import { REQUEST_DEADLINE_MS, withRequestDeadline } from "../support/stream.ts";
 import { expect } from "bun:test";
-import type { EntityIdScope } from "../../packages/ramose/src/internal/replication/entity-id.ts";
+import type { EntityIdScope } from "../../packages/ramosedb/src/internal/replication/entity-id.ts";
 
 export const { deploy, destroy, beforeAll, afterAll } = Test.make({
   providers: Layer.mergeAll(Cloudflare.providers(), Ramose.providers()),

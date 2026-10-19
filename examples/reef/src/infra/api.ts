@@ -1,6 +1,6 @@
 import { BetterAuth } from "@alchemy.run/better-auth";
 import { CloudflareD1 } from "@alchemy.run/better-auth/CloudflareD1";
-import { ramoseToken } from "ramose/better-auth";
+import { ramoseToken } from "ramosedb/better-auth";
 import * as Cloudflare from "alchemy/Cloudflare";
 import { jwt } from "better-auth/plugins/jwt";
 import * as Effect from "effect/Effect";

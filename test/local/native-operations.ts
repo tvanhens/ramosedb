@@ -1,8 +1,8 @@
 import { beforeAll, describe, expect, test } from "bun:test";
 import * as Effect from "effect/Effect";
 import * as EffectSchema from "effect/Schema";
-import { signToken } from "../../packages/ramose/test/sign-local-token.ts";
-import { schemaTx } from "../../packages/ramose/src/db/internal.ts";
+import { signToken } from "../../packages/ramosedb/test/sign-local-token.ts";
+import { schemaTx } from "../../packages/ramosedb/src/db/internal.ts";
 import {
   clientRef,
   Entity,
@@ -10,26 +10,26 @@ import {
   isEntityId,
   Schema,
   string,
-} from "ramose/db";
-import { invocationId, type EntityId } from "../../packages/ramose/src/db/refs.ts";
-import { base64Url } from "../../packages/ramose/src/internal/replication/server-identity.ts";
+} from "ramosedb/db";
+import { invocationId, type EntityId } from "../../packages/ramosedb/src/db/refs.ts";
+import { base64Url } from "../../packages/ramosedb/src/internal/replication/server-identity.ts";
 import {
   buildOutboxRecord,
   mappingKey,
   type OutboxDraft,
   type OutboxRecord,
-} from "../../packages/ramose/src/internal/replication/outbox.ts";
+} from "../../packages/ramosedb/src/internal/replication/outbox.ts";
 import {
   buildMutationRequest,
   classifyMutationResponse,
   substituteMutationRefs,
-} from "../../packages/ramose/src/internal/replication/submission.ts";
-import { submitMutation } from "../../packages/ramose/src/internal/replication/transport.ts";
-import { lowerOwnedOperations } from "../../packages/ramose/src/internal/authorization/authoring/index.ts";
+} from "../../packages/ramosedb/src/internal/replication/submission.ts";
+import { submitMutation } from "../../packages/ramosedb/src/internal/replication/transport.ts";
+import { lowerOwnedOperations } from "../../packages/ramosedb/src/internal/authorization/authoring/index.ts";
 import {
   CatalogId,
   DigestHex,
-} from "../../packages/ramose/src/internal/authorization/identities.ts";
+} from "../../packages/ramosedb/src/internal/authorization/identities.ts";
 import {
   json,
   openEntityHandle,
