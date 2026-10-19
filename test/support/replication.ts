@@ -6,7 +6,7 @@ import {
   emptyClientReplicationState,
   type ClientReplicationState,
   type ReplicationFrame,
-} from "../../packages/ramose/src/internal/replication/index.ts";
+} from "../../packages/ramosedb/src/internal/replication/index.ts";
 
 const utf8 = new TextEncoder();
 

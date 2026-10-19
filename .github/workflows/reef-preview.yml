@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened, closed]
     paths:
       - "examples/reef/**"
-      - "packages/ramose/**"
+      - "packages/ramosedb/**"
       - ".github/workflows/reef-preview.yml"
 
 permissions:

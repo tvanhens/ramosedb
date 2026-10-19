@@ -1,21 +1,21 @@
 {
-  "name": "ramose",
+  "name": "ramosedb",
   "version": "0.3.0",
   "type": "module",
-  "description": "Ramose \u2014 an immutable, Datomic-inspired graph database for Cloudflare (Workers + Durable Objects + R2), built on Effect. One package: portable authoring (`ramose/db`), Alchemy resources (`ramose`), the offline-first browser client (`ramose/client`), its React adapter (`ramose/react`), the peer Worker (`ramose/worker`) and the Better Auth plugin (`ramose/better-auth`).",
+  "description": "RamoseDB — an immutable, Datomic-inspired graph database for Cloudflare (Workers + Durable Objects + R2), built on Effect. One package: portable authoring (`ramosedb/db`), Alchemy resources (`ramosedb`), the offline-first browser client (`ramosedb/client`), its React adapter (`ramosedb/react`), the peer Worker (`ramosedb/worker`) and the Better Auth plugin (`ramosedb/better-auth`).",
   "license": "Apache-2.0",
   "author": "Tyler van Hensbergen <tvanhens@gmail.com>",
   "homepage": "https://ramose.ai",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tvanhens/ramose.git",
-    "directory": "packages/ramose"
+    "url": "git+https://github.com/tvanhens/ramosedb.git",
+    "directory": "packages/ramosedb"
   },
   "bugs": {
-    "url": "https://github.com/tvanhens/ramose/issues"
+    "url": "https://github.com/tvanhens/ramosedb/issues"
   },
   "keywords": [
-    "ramose",
+    "ramosedb",
     "database",
     "datalog",
     "datomic",

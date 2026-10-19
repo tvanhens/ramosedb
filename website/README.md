@@ -1,6 +1,6 @@
 # ramose.ai
 
-The Ramose documentation site uses Astro and Starlight and is deployed to
+The RamoseDB documentation site uses Astro and Starlight and is deployed to
 Cloudflare with Alchemy. Public pages live in `src/content/docs`.
 
 ## Develop and verify

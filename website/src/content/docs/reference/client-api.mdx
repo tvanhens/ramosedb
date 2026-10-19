@@ -4,16 +4,16 @@ description: Reference for creating a client, opening the database, observing qu
 ---
 import Next from "../../../components/Next.astro";
 
-`ramose/client` owns authorized browser replicas, database handles, local query execution, synchronization, the durable outbox, optimistic layers, and receipts. Author the named schema through `ramose/db`, then pass that shared value to the client.
+`ramosedb/client` owns authorized browser replicas, database handles, local query execution, synchronization, the durable outbox, optimistic layers, and receipts. Author the named schema through `ramosedb/db`, then pass that shared value to the client.
 
-*New here? Start with [Build your first Ramose web app](/getting-started/quickstart/).*
+*New here? Start with [Build your first RamoseDB web app](/getting-started/quickstart/).*
 
 ## Type component inputs
 
 Infer live entity fields, identity, and mutation methods directly from the schema:
 
 ```ts
-import type { EntityHandleFor } from "ramose/client"
+import type { EntityHandleFor } from "ramosedb/client"
 
 type TaskHandle = EntityHandleFor<typeof Task>
 ```
@@ -23,7 +23,7 @@ Use this type for component props instead of maintaining a second handwritten mo
 ## createClient
 
 ```ts
-import { createClient } from "ramose/client"
+import { createClient } from "ramosedb/client"
 
 const client = createClient({
   url: "https://data.example.com",

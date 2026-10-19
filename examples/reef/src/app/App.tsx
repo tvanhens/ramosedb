@@ -1,7 +1,7 @@
 import { Person } from "../domain/schema.ts";
 import { useMutationFeedback, MutationFeedbackProvider } from "./MutationFeedback.tsx";
 import { Suspense, useEffect, useMemo, useState } from "react";
-import { RamoseProvider, useQuery, useSyncState } from "ramose/react";
+import { RamoseProvider, useQuery, useSyncState } from "ramosedb/react";
 import {
   authClient,
   clearCachedUser,

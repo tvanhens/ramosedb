@@ -1,4 +1,4 @@
-import { type QueryStats, query } from "../packages/ramose/src/internal/core/index.ts";
+import { type QueryStats, query } from "../packages/ramosedb/src/internal/core/index.ts";
 import { buildBenchDb, fmt, percentile } from "./lib.ts";
 
 const people = Number(process.argv[2] ?? 100_000);

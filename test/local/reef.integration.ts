@@ -5,9 +5,9 @@ import * as Cloudflare from "alchemy/Cloudflare";
 import * as Test from "alchemy/Test/Bun";
 import * as Effect from "effect/Effect";
 import * as Layer from "effect/Layer";
-import * as Ramose from "ramose";
+import * as Ramose from "ramosedb";
 import { chromium } from "playwright";
-import type { BetterAuthProvider } from "../../packages/ramose/src/better-auth/client.ts";
+import type { BetterAuthProvider } from "../../packages/ramosedb/src/better-auth/client.ts";
 import Stack from "../../examples/reef/alchemy.run.ts";
 
 setDefaultTimeout(120_000);
@@ -39,7 +39,7 @@ describe("Reef through its public Worker", () => {
       expect(signup.status).toBe(200);
       const userId: string = (signup.body as { user: { id: string } }).user.id;
       const built = await Bun.build({
-        entrypoints: ["packages/ramose/src/better-auth/client.ts"],
+        entrypoints: ["packages/ramosedb/src/better-auth/client.ts"],
         target: "browser",
       });
       expect(built.success).toBe(true);

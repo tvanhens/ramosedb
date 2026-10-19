@@ -1,8 +1,8 @@
 import { Issue } from "../../domain/schema.ts";
 import { AUTH_BASE_PATH } from "../../domain/shared.ts";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
-import { useChangesets } from "ramose/react";
-import { ChangesetError, type Changeset } from "ramose/client";
+import { useChangesets } from "ramosedb/react";
+import { ChangesetError, type Changeset } from "ramosedb/client";
 import type { IssueRow } from "../entities.ts";
 
 export const ChangesetPanel = (props: {

@@ -1,31 +1,31 @@
 import { expect } from "vitest";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import type { OperationVersion } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
-import { clientRef, invocationId } from "../../packages/ramose/src/db/refs.ts";
-import type { EntityId } from "../../packages/ramose/src/db/refs.ts";
-import { SubmissionLoop } from "../../packages/ramose/src/client/submission.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import type { OperationVersion } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
+import { clientRef, invocationId } from "../../packages/ramosedb/src/db/refs.ts";
+import type { EntityId } from "../../packages/ramosedb/src/db/refs.ts";
+import { SubmissionLoop } from "../../packages/ramosedb/src/client/submission.ts";
 import {
   IndexedDbReplicaStorage,
   REPLICA_DATABASE_VERSION,
-} from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+} from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import {
   platformLocks,
   replicaLeaderKey,
   SyncLeadership,
-} from "../../packages/ramose/src/internal/replication/leadership.ts";
-import type { OutboxDraft } from "../../packages/ramose/src/internal/replication/outbox.ts";
-import type { ReplicationIdentity } from "../../packages/ramose/src/internal/replication/protocol.ts";
+} from "../../packages/ramosedb/src/internal/replication/leadership.ts";
+import type { OutboxDraft } from "../../packages/ramosedb/src/internal/replication/outbox.ts";
+import type { ReplicationIdentity } from "../../packages/ramosedb/src/internal/replication/protocol.ts";
 import {
   REPLICA_GENERATIONS_STORE,
   replicaDatabaseScopeOf,
   replicaScopeOf,
   type ReplicaDatabaseScope,
-} from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
+} from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
 import { browserTest } from "./fixtures.ts";
 import type { Settlement, TabReport } from "./leadership-tab.ts";
 import { openTab, type TabHandle } from "./tab-harness.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const tabModule = new URL("./leadership-tab.ts", import.meta.url).href;
 

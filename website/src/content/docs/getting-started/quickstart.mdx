@@ -1,5 +1,5 @@
 ---
-title: Build your first Ramose web app
+title: Build your first RamoseDB web app
 description: Build a typed, offline-first React task list, deploy its authoritative server, and leave it ready for an MCP client.
 ---
 import Learn from "../../../components/Learn.astro";
@@ -11,22 +11,22 @@ This guide builds a small React task list. It has one database, one entity, a li
 
 ## 1. Create the app
 
-Start with a React application and add Ramose:
+Start with a React application and add RamoseDB:
 
 ```sh
 bun create vite ramose-tasks --template react-ts
 cd ramose-tasks
-bun add ramose effect@rc
+bun add ramosedb effect@rc
 ```
 
-Ramose uses Effect Schema for operation input and output codecs, so install `effect` as a direct dependency.
+RamoseDB uses Effect Schema for operation input and output codecs, so install `effect` as a direct dependency.
 
 ## 2. Define the domain
 
 Create `src/domain.ts`:
 
 ```ts
-import * as Ramose from "ramose/db"
+import * as Ramose from "ramosedb/db"
 import * as S from "effect/Schema"
 
 export const Task = Ramose.Entity(
@@ -101,7 +101,7 @@ import {
   createServer,
   createTransactorDO,
   deployOperationCatalogs,
-} from "ramose/worker"
+} from "ramosedb/worker"
 import { deployment } from "./src/domain"
 
 const operationCatalogs = await Effect.runPromise(
@@ -120,7 +120,7 @@ import * as Alchemy from "alchemy"
 import * as Cloudflare from "alchemy/Cloudflare"
 import * as Effect from "effect/Effect"
 import * as Layer from "effect/Layer"
-import * as Ramose from "ramose"
+import * as Ramose from "ramosedb"
 
 const Store = Cloudflare.R2.Bucket("TasksStore", {
   name: "ramose-tasks-store",
@@ -148,7 +148,7 @@ export default Alchemy.Stack(
 )
 ```
 
-Ramose verifies identity tokens but does not issue them. Use your OAuth or sign-in provider's JWKS URL, issuer, and audience. For a local signer and provider-specific notes, see [Authentication](/guides/sign-in/).
+RamoseDB verifies identity tokens but does not issue them. Use your OAuth or sign-in provider's JWKS URL, issuer, and audience. For a local signer and provider-specific notes, see [Authentication](/guides/sign-in/).
 
 Deploy or run locally:
 
@@ -163,7 +163,7 @@ Keep the printed server URL. The app uses it as its data endpoint; an MCP client
 Create `src/ramose.ts`:
 
 ```ts
-import { createClient } from "ramose/client"
+import { createClient } from "ramosedb/client"
 import { getSession } from "./auth"
 import { App, ROOT_DATABASE } from "./domain"
 
@@ -185,7 +185,7 @@ Replace `src/App.tsx`:
 
 ```tsx
 import { FormEvent, useState } from "react"
-import { useQuery, useSyncState } from "ramose/react"
+import { useQuery, useSyncState } from "ramosedb/react"
 import { Task } from "./domain"
 import { client, rootDb } from "./ramose"
 

@@ -1,10 +1,10 @@
 ---
-title: Ramose — the database optimized for humans and agents
+title: RamoseDB — the database optimized for humans and agents
 description: One offline-first graph database for your app and its agents, with one model, one operation surface, and one policy.
 template: splash
 head:
   - tag: title
-    content: Ramose — the database optimized for humans and agents
+    content: RamoseDB — the database optimized for humans and agents
   - tag: meta
     attrs:
       property: og:type
@@ -20,7 +20,7 @@ import HistoryRecoveryDemo from "../../components/HistoryRecoveryDemo.astro";
   <HeroMesh />
   <h1>The database optimized for <em>humans</em> and <em>agents</em>.</h1>
   <div class="rg-proto-hero-grid">
-    <p class="rg-proto-intro">Right now those are two jobs: the app you shipped, and the MCP server, auth path, and permission model you bolt on beside it for agents. Ramose makes them one. Declare schema, operations, and policy once—your UI gets offline-first writes and local queries, your agents get one discoverable MCP endpoint, and both use the same capabilities.</p>
+    <p class="rg-proto-intro">Right now those are two jobs: the app you shipped, and the MCP server, auth path, and permission model you bolt on beside it for agents. RamoseDB makes them one. Declare schema, operations, and policy once—your UI gets offline-first writes and local queries, your agents get one discoverable MCP endpoint, and both use the same capabilities.</p>
     <div class="rg-proto-hero-cta">
       <div class="rg-proto-actions">
         <a class="rg-proto-button primary" href="/getting-started/quickstart/">Start in 15 minutes →</a>
@@ -36,7 +36,7 @@ import HistoryRecoveryDemo from "../../components/HistoryRecoveryDemo.astro";
   </div>
 </section>
 
-<section class="rg-feature-console" aria-label="Ramose capabilities" data-feature-console>
+<section class="rg-feature-console" aria-label="RamoseDB capabilities" data-feature-console>
   <div class="rg-feature-code">
     <div class="rg-feature-sample active" data-feature-sample>
       <p class="rg-console-label">schema.ts</p>
@@ -90,7 +90,7 @@ const openTasks = await mcp.callTool({
     </div>
   </div>
   <div class="rg-feature-output">
-    <div class="rg-feature-tabs" role="tablist" aria-label="Ramose capabilities">
+    <div class="rg-feature-tabs" role="tablist" aria-label="RamoseDB capabilities">
       <button class="active" type="button" role="tab" aria-selected="true" aria-controls="feature-typed" data-feature-tab>Typed client</button>
       <button type="button" role="tab" aria-selected="false" aria-controls="feature-live" tabindex="-1" data-feature-tab>Live queries</button>
       <button type="button" role="tab" aria-selected="false" aria-controls="feature-permissions" tabindex="-1" data-feature-tab>Permissions</button>
@@ -118,7 +118,7 @@ const openTasks = await mcp.callTool({
       <div class="rg-feature-card" id="feature-permissions" role="tabpanel" data-feature-card aria-hidden="true">
         <p class="rg-console-label">Permissions</p>
         <h2>One policy for every caller</h2>
-        <p>Field-level rules are enforced by the Ramose server for your UI and your agents, so neither path can quietly see more than the other.</p>
+        <p>Field-level rules are enforced by the RamoseDB server for your UI and your agents, so neither path can quietly see more than the other.</p>
         <div class="rg-feature-result">
           <span>Enforced rule</span>
           <code>Task.setDone → member only</code>
@@ -142,7 +142,7 @@ const openTasks = await mcp.callTool({
 <section class="rg-proto-section rg-instant">
   <p class="rg-proto-kicker">01 — Instant by default</p>
   <h2>That snappy, no-spinner feel? You get it on day one.</h2>
-  <p class="rg-proto-lede">The apps people call fast never wait on a round trip. Ramose gives you that architecture by default: writes commit to the local store and render immediately, sync catches up behind them, and every other client and agent converges on its own. Pull the plug; reads and writes keep working.</p>
+  <p class="rg-proto-lede">The apps people call fast never wait on a round trip. RamoseDB gives you that architecture by default: writes commit to the local store and render immediately, sync catches up behind them, and every other client and agent converges on its own. Pull the plug; reads and writes keep working.</p>
   <InstantSyncDemo />
 </section>
 
@@ -150,7 +150,7 @@ const openTasks = await mcp.callTool({
   <div class="rg-proto-copy">
     <p class="rg-proto-kicker">02 — Agents</p>
     <h2>Everything a user can do an agent can do.</h2>
-    <p class="rg-proto-lede">Ramose projects the capabilities already in your app through three MCP tools. Agents discover the catalog progressively, query visible data, and invoke the same named operations as your UI. No shadow database, glue server, or second authorization model to keep aligned.</p>
+    <p class="rg-proto-lede">RamoseDB projects the capabilities already in your app through three MCP tools. Agents discover the catalog progressively, query visible data, and invoke the same named operations as your UI. No shadow database, glue server, or second authorization model to keep aligned.</p>
   </div>
   <AgentCommandDemo />
 </section>
@@ -159,7 +159,7 @@ const openTasks = await mcp.callTool({
   <div class="rg-proto-copy">
     <p class="rg-proto-kicker">03 — History</p>
     <h2>Data is never lost.</h2>
-    <p class="rg-proto-lede">Mistakes happen. A person clicks the wrong thing, an agent runs the wrong command, or a bug reaches production. Ramose keeps every committed version, so recovery is an elegant rewind instead of a restore drill. Move back to the moment before the mistake, verify the state, and continue.</p>
+    <p class="rg-proto-lede">Mistakes happen. A person clicks the wrong thing, an agent runs the wrong command, or a bug reaches production. RamoseDB keeps every committed version, so recovery is an elegant rewind instead of a restore drill. Move back to the moment before the mistake, verify the state, and continue.</p>
     <p class="rg-proto-link"><a href="/concepts/time-travel/">Read about time travel →</a></p>
   </div>
   <HistoryRecoveryDemo />
@@ -169,7 +169,7 @@ const openTasks = await mcp.callTool({
   <div class="rg-proto-copy">
     <p class="rg-proto-kicker">04 — Backends</p>
     <h2>Cloudflare today, your provider tomorrow</h2>
-    <p class="rg-proto-lede">Ramose runs on Cloudflare today, but your application is defined against Ramose — not a provider console. AWS and self-hosted backends are planned behind the same schema, policy, sync, and MCP surface, so changing infrastructure does not mean rewriting the app.</p>
+    <p class="rg-proto-lede">RamoseDB runs on Cloudflare today, but your application is defined against RamoseDB — not a provider console. AWS and self-hosted backends are planned behind the same schema, policy, sync, and MCP surface, so changing infrastructure does not mean rewriting the app.</p>
     <p class="rg-proto-link"><a href="/guides/deploy/">See the deployment →</a></p>
   </div>
   <div class="rg-stack-card rg-provider-card">
@@ -194,9 +194,9 @@ const openTasks = await mcp.callTool({
   <p>One npm package, one Alchemy stack, no managed service in the path between your app and your data.</p>
   <div class="rg-proto-actions">
     <a class="rg-proto-button primary" href="/getting-started/quickstart/">Quickstart →</a>
-    <a class="rg-proto-button secondary" href="https://github.com/tvanhens/ramose">GitHub</a>
+    <a class="rg-proto-button secondary" href="https://github.com/tvanhens/ramosedb">GitHub</a>
   </div>
-  <div class="rg-command-row"><code>bun add ramose</code><code>bun alchemy dev</code><code>bun alchemy deploy</code></div>
+  <div class="rg-command-row"><code>bun add ramosedb</code><code>bun alchemy dev</code><code>bun alchemy deploy</code></div>
 </section>
 
 <nav class="rg-proto-footer" aria-label="Documentation" data-pagefind-ignore>

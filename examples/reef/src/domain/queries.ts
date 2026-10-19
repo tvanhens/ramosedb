@@ -1,6 +1,6 @@
-import type { MutationRef } from "ramose/db";
+import type { MutationRef } from "ramosedb/db";
 // docs:reef-queries
-import type { ClientDatabase } from "ramose/client";
+import type { ClientDatabase } from "ramosedb/client";
 import { Comment, Issue, Label, Person, Workspace } from "./schema.ts";
 
 export const workspaces = (db: Pick<ClientDatabase, "query">) =>

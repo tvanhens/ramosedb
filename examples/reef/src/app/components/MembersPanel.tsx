@@ -1,7 +1,7 @@
 import { useMutationFeedback } from "../MutationFeedback.tsx";
 import { Workspace } from "../../domain/schema.ts";
-import type { ClientDatabase, EntityHandleFor } from "ramose/client";
-import { useQuery } from "ramose/react";
+import type { ClientDatabase, EntityHandleFor } from "ramosedb/client";
+import { useQuery } from "ramosedb/react";
 import { people } from "../../domain/queries.ts";
 import type { ReefMutations } from "../ramose.ts";
 import { personLabel } from "../entities.ts";

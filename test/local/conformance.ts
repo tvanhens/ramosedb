@@ -1,8 +1,8 @@
 import { beforeAll, describe, expect, test } from "bun:test";
-import { Query } from "ramose/db";
-import { lowerQueryObject, schemaTx } from "../../packages/ramose/src/db/internal.ts";
-import { signToken } from "../../packages/ramose/test/sign-local-token.ts";
-import { isEntityId } from "../../packages/ramose/src/db/refs.ts";
+import { Query } from "ramosedb/db";
+import { lowerQueryObject, schemaTx } from "../../packages/ramosedb/src/db/internal.ts";
+import { signToken } from "../../packages/ramosedb/test/sign-local-token.ts";
+import { isEntityId } from "../../packages/ramosedb/src/db/refs.ts";
 import {
   applyLiveDiffs,
   readLiveNdjson,

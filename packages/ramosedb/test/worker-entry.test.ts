@@ -24,6 +24,6 @@ describe("the entry a standalone app passes as `main`", () => {
 
   test("the bare specifier does NOT — this is the bug the helper exists for", () => {
 
-    expect(() => resolveMainPath("ramose/worker")).toThrow();
+    expect(() => resolveMainPath("ramosedb/worker")).toThrow();
   });
 });

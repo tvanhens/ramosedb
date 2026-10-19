@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
-import type { Receipt } from "ramose/client";
-import { useReceipt } from "ramose/react";
+import type { Receipt } from "ramosedb/client";
+import { useReceipt } from "ramosedb/react";
 
 type Notice = { readonly receipt: Receipt; readonly label: string };
 type Track = (receipt: Receipt, label: string) => Receipt;

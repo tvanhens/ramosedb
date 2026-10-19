@@ -1,64 +1,64 @@
 import * as Result from "effect/Result";
 import { expect } from "vitest";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import type { OperationVersion } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
-import { Index } from "../../packages/ramose/src/internal/core/datom.ts";
-import { clientRef, invocationId } from "../../packages/ramose/src/db/refs.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import type { OperationVersion } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
+import { Index } from "../../packages/ramosedb/src/internal/core/datom.ts";
+import { clientRef, invocationId } from "../../packages/ramosedb/src/db/refs.ts";
 import type {
   ClientRef,
   EntityId,
   InvocationId,
-} from "../../packages/ramose/src/db/refs.ts";
-import type { ProjectionTx } from "../../packages/ramose/src/db/Projection.ts";
+} from "../../packages/ramosedb/src/db/refs.ts";
+import type { ProjectionTx } from "../../packages/ramosedb/src/db/Projection.ts";
 import {
   sealEntityId,
   type EntityIdScope,
-} from "../../packages/ramose/src/internal/replication/entity-id.ts";
+} from "../../packages/ramosedb/src/internal/replication/entity-id.ts";
 import {
   IndexedDbReplicaStorage,
   replicaPartitionKey,
-} from "../../packages/ramose/src/internal/replication/indexeddb.ts";
-import type { OutboxDraft } from "../../packages/ramose/src/internal/replication/outbox.ts";
-import { mutationPartitionKey } from "../../packages/ramose/src/internal/replication/outbox.ts";
-import { makeClientProjectionCatalog } from "../../packages/ramose/src/internal/replication/projection-binding.ts";
-import type { ClientProjectionCatalog } from "../../packages/ramose/src/internal/replication/projection-binding.ts";
-import { OptimisticReconciler } from "../../packages/ramose/src/internal/replication/reconciliation.ts";
+} from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
+import type { OutboxDraft } from "../../packages/ramosedb/src/internal/replication/outbox.ts";
+import { mutationPartitionKey } from "../../packages/ramosedb/src/internal/replication/outbox.ts";
+import { makeClientProjectionCatalog } from "../../packages/ramosedb/src/internal/replication/projection-binding.ts";
+import type { ClientProjectionCatalog } from "../../packages/ramosedb/src/internal/replication/projection-binding.ts";
+import { OptimisticReconciler } from "../../packages/ramosedb/src/internal/replication/reconciliation.ts";
 import {
   classifyReplicationAdoption,
   ReplicationSession,
   type ReplicationSessionSnapshot,
-} from "../../packages/ramose/src/internal/replication/session.ts";
+} from "../../packages/ramosedb/src/internal/replication/session.ts";
 import {
   replicaDatabaseScopeOf,
   replicaScopeOf,
   type ReplicaDatabaseScope,
   type ReplicaScope,
-} from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
+} from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
 import {
   decodeReplicationFrame,
   type Change,
   type ReplicationIdentity,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
-import { rootReplicaRouteSlot } from "../../packages/ramose/src/internal/replication/route-slot.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
+import { rootReplicaRouteSlot } from "../../packages/ramosedb/src/internal/replication/route-slot.ts";
 import {
   replicationActivationAddress,
   replicationCredentialFingerprint,
-} from "../../packages/ramose/src/internal/replication/transport.ts";
+} from "../../packages/ramosedb/src/internal/replication/transport.ts";
 import {
   generateServerIdentityRoot,
   sealingKeyOf,
-} from "../../packages/ramose/src/internal/replication/server-identity.ts";
+} from "../../packages/ramosedb/src/internal/replication/server-identity.ts";
 import {
   armCheckpoint,
   checkpointStatus,
   releaseCheckpoint,
   resetTestHooks,
   testRuntimeBoundaries,
-} from "../../packages/ramose/src/internal/test-hooks.ts";
+} from "../../packages/ramosedb/src/internal/test-hooks.ts";
 import recorded from "./frames/optimistic-fence.client.json";
 import { browserTest } from "./fixtures.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const identity = (
   overrides: Partial<ReplicationIdentity> = {},

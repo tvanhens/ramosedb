@@ -4,7 +4,7 @@ import * as Alchemy from "alchemy";
 import * as Cloudflare from "alchemy/Cloudflare";
 import * as Effect from "effect/Effect";
 import * as Layer from "effect/Layer";
-import * as Ramose from "ramose";
+import * as Ramose from "ramosedb";
 import LocalAuthRestartWorker from "./better-auth-restart-worker.ts";
 import LocalAuthRotatedWorker from "./better-auth-rotated-worker.ts";
 import LocalAuthWorker from "./better-auth-worker.ts";

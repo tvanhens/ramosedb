@@ -1,54 +1,54 @@
 import { expect } from "vitest";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
-import type { OperationVersion } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import { clientRef, invocationId } from "../../packages/ramose/src/db/refs.ts";
-import type { EntityId } from "../../packages/ramose/src/db/refs.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
+import type { OperationVersion } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import { clientRef, invocationId } from "../../packages/ramosedb/src/db/refs.ts";
+import type { EntityId } from "../../packages/ramosedb/src/db/refs.ts";
 import {
   sealEntityId,
   type EntityIdScope,
-} from "../../packages/ramose/src/internal/replication/entity-id.ts";
-import { IndexedDbReplicaStorage } from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+} from "../../packages/ramosedb/src/internal/replication/entity-id.ts";
+import { IndexedDbReplicaStorage } from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import type {
   OutboxDraft,
   QueuedMapping,
   ReceiptRecord,
-} from "../../packages/ramose/src/internal/replication/outbox.ts";
+} from "../../packages/ramosedb/src/internal/replication/outbox.ts";
 import {
   ActivationFence,
   type ActivationFenceSnapshot,
-} from "../../packages/ramose/src/internal/replication/activation-fence.ts";
-import { ReplicationSession } from "../../packages/ramose/src/internal/replication/session.ts";
-import type { ClientRef } from "../../packages/ramose/src/db/refs.ts";
+} from "../../packages/ramosedb/src/internal/replication/activation-fence.ts";
+import { ReplicationSession } from "../../packages/ramosedb/src/internal/replication/session.ts";
+import type { ClientRef } from "../../packages/ramosedb/src/db/refs.ts";
 import {
   mappingKey,
   mutationPartitionKey,
-} from "../../packages/ramose/src/internal/replication/outbox.ts";
+} from "../../packages/ramosedb/src/internal/replication/outbox.ts";
 import {
   replicaDatabaseScopeOf,
   replicaScopeOf,
   type ReplicaDatabaseScope,
   type ReplicaScope,
-} from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
-import type { ReplicationIdentity } from "../../packages/ramose/src/internal/replication/protocol.ts";
+} from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
+import type { ReplicationIdentity } from "../../packages/ramosedb/src/internal/replication/protocol.ts";
 import {
   runSubmissionPass,
   substituteMutationRefs,
   type MutationEndpoint,
-} from "../../packages/ramose/src/internal/replication/submission.ts";
-import { submitMutation } from "../../packages/ramose/src/internal/replication/transport.ts";
+} from "../../packages/ramosedb/src/internal/replication/submission.ts";
+import { submitMutation } from "../../packages/ramosedb/src/internal/replication/transport.ts";
 import {
   generateServerIdentityRoot,
   sealingKeyOf,
-} from "../../packages/ramose/src/internal/replication/server-identity.ts";
+} from "../../packages/ramosedb/src/internal/replication/server-identity.ts";
 import {
   armCheckpoint,
   releaseCheckpoint,
   resetTestHooks,
   testRuntimeBoundaries,
-} from "../../packages/ramose/src/internal/test-hooks.ts";
+} from "../../packages/ramosedb/src/internal/test-hooks.ts";
 import { browserTest } from "./fixtures.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const opaque = (character: string): string => character.repeat(43);
 

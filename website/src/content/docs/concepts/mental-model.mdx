@@ -1,18 +1,18 @@
 ---
-title: The Ramose mental model
+title: The RamoseDB mental model
 description: Six ideas that make schemas, databases, queries, offline behavior, authorization, and MCP fit together.
 ---
 import Learn from "../../../components/Learn.astro";
 import SurfaceMap from "../../../components/SurfaceMap.astro";
 import Next from "../../../components/Next.astro";
 
-Ramose is easier to learn if you begin with the whole model. Nearly every API is a consequence of the six ideas on this page.
+RamoseDB is easier to learn if you begin with the whole model. Nearly every API is a consequence of the six ideas on this page.
 
-<Learn learn={["Why one database is a coherent graph", "Why queries are local values and writes are named operations", "Why the app and MCP surface can share one security model"]} before={[{ href: "/getting-started/introduction/", label: "What is Ramose?" }]} minutes={8} />
+<Learn learn={["Why one database is a coherent graph", "Why queries are local values and writes are named operations", "Why the app and MCP surface can share one security model"]} before={[{ href: "/getting-started/introduction/", label: "What is RamoseDB?" }]} minutes={8} />
 
 ## 1. One database is one graph
 
-A Ramose database is a set of typed entities and relations governed by one deployed catalog and policy. Related data stays directly queryable instead of becoming a database-routing hierarchy.
+A RamoseDB database is a set of typed entities and relations governed by one deployed catalog and policy. Related data stays directly queryable instead of becoming a database-routing hierarchy.
 
 ## 2. The catalog is deployed code
 
@@ -42,7 +42,7 @@ The browser persists the complete current authorized database. It does not persi
 
 ## 6. Authorization shapes what exists for a caller
 
-For a principal, Ramose constructs a filtered immutable database before evaluating reads. Hidden facts cannot affect joins, ordering, counts, relations, errors, or synchronization signals. Operation grants are separate and exact.
+For a principal, RamoseDB constructs a filtered immutable database before evaluating reads. Hidden facts cannot affect joins, ordering, counts, relations, errors, or synchronization signals. Operation grants are separate and exact.
 
 <SurfaceMap />
 

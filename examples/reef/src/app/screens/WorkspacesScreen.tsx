@@ -1,6 +1,6 @@
 import { useMutationFeedback } from "../MutationFeedback.tsx";
 import { useState } from "react";
-import { useDb, useSuspenseQuery } from "ramose/react";
+import { useDb, useSuspenseQuery } from "ramosedb/react";
 import { workspaces } from "../../domain/queries.ts";
 import { isWorkspaceSlug, slugify } from "../../domain/shared.ts";
 import type { ReefMutations } from "../ramose.ts";

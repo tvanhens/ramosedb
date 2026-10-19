@@ -1,9 +1,9 @@
 # Reef
 
-The flagship Ramose demo: a Linear-style, multi-tenant issue tracker in one
-Ramose database. Better Auth supplies identity; workspace membership and
+The flagship RamoseDB demo: a Linear-style, multi-tenant issue tracker in one
+RamoseDB database. Better Auth supplies identity; workspace membership and
 reference-based read policy isolate each tenant's data. The offline-first
-`ramose/client` and `ramose/react` render the board.
+`ramosedb/client` and `ramosedb/react` render the board.
 
 ## Run it
 
@@ -58,11 +58,11 @@ is data:
 | `src/domain/queries.ts` | the queries the app and tests share |
 | `src/domain/rank.ts` | fractional ranking — a drag writes one `:issue/rank` double |
 | `src/domain/shared.ts` | auth config, ports, and the workspace slug rules |
-| `src/infra/api.ts` | the auth Worker: Better Auth (jwt + `ramose/better-auth` mint plugins) on D1, reachable through service bindings |
-| `src/infra/resources.ts` / `peer.ts` | the Ramose peer with the catalog deployed onto it |
+| `src/infra/api.ts` | the auth Worker: Better Auth (jwt + `ramosedb/better-auth` mint plugins) on D1, reachable through service bindings |
+| `src/infra/resources.ts` / `peer.ts` | the RamoseDB peer with the catalog deployed onto it |
 | `src/infra/web.ts` / `web-worker.ts` | the public SPA and same-origin gateway |
 | `src/infra/domain.ts` | `REEF_DOMAIN` — production naming and routing |
-| `src/app/` | the React SPA on `ramose/react` |
+| `src/app/` | the React SPA on `ramosedb/react` |
 | `dev.ts` | the SPA dev server: Bun serve + `/api` and `/db` proxies |
 | `test/` | policy and catalog shape, slug rules, ranking — unit tests |
 

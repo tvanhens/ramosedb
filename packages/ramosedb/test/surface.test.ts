@@ -112,7 +112,7 @@ const KILLED = [
   "schemaTxFromCatalog",
 ];
 
-describe("the `ramose` barrel", () => {
+describe("the `ramosedb` barrel", () => {
   test("exports only deployment APIs", async () => {
     const [alchemy, db] = await Promise.all([
       import("../src/index.ts"),

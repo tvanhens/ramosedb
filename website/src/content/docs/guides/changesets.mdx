@@ -35,7 +35,7 @@ Preparation uses the authoritative operation body and its normal input, field, r
 
 Operations expose database reads and writes, the caller, and an authoritative clock. There is no effect callback or environment access. Keep network requests, messages, payments, and other external work outside transaction bodies. To request external work durably, write an application record in the transaction and process it separately with a consumer that safely handles retries.
 
-Application callbacks and codecs are trusted code and must obey this transaction model. Ramose does not sandbox arbitrary JavaScript or prevent a developer from importing an external client.
+Application callbacks and codecs are trusted code and must obey this transaction model. RamoseDB does not sandbox arbitrary JavaScript or prevent a developer from importing an external client.
 
 ## Separate agent credentials from approval
 

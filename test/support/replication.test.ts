@@ -1,17 +1,17 @@
 import { expect, test } from "bun:test";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
 import {
   MAX_REPLICATION_FRAME_BYTES,
   encodeReplicationFrame,
   type ReplicationFrame,
   type ReplicationIdentity,
-} from "../../packages/ramose/src/internal/replication/index.ts";
+} from "../../packages/ramosedb/src/internal/replication/index.ts";
 import {
   collectCommittedSnapshot,
   decodeReplicationNdjson,
   readReplicationNdjson,
 } from "./replication.ts";
-import { sealedHandle } from "../../packages/ramose/test/replication-fixtures.ts";
+import { sealedHandle } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const opaque = (character: string): string => character.repeat(43);
 const identity: ReplicationIdentity = {

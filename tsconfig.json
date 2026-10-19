@@ -27,13 +27,13 @@
     "types": ["bun", "@cloudflare/workers-types"],
 
     "paths": {
-      "ramose": ["./packages/ramose/src/index.ts"],
-      "ramose/db": ["./packages/ramose/src/db/index.ts"],
-      "ramose/client": ["./packages/ramose/src/client/index.ts"],
-      "ramose/react": ["./packages/ramose/src/react/index.ts"],
-      "ramose/worker": ["./packages/ramose/src/worker/index.ts"],
-      "ramose/better-auth/client": ["./packages/ramose/src/better-auth/client.ts"],
-      "ramose/better-auth": ["./packages/ramose/src/better-auth/index.ts"]
+      "ramosedb": ["./packages/ramosedb/src/index.ts"],
+      "ramosedb/db": ["./packages/ramosedb/src/db/index.ts"],
+      "ramosedb/client": ["./packages/ramosedb/src/client/index.ts"],
+      "ramosedb/react": ["./packages/ramosedb/src/react/index.ts"],
+      "ramosedb/worker": ["./packages/ramosedb/src/worker/index.ts"],
+      "ramosedb/better-auth/client": ["./packages/ramosedb/src/better-auth/client.ts"],
+      "ramosedb/better-auth": ["./packages/ramosedb/src/better-auth/index.ts"]
     },
     "plugins": [
       {
@@ -99,8 +99,8 @@
     "vitest.browser.config.ts",
     "website/alchemy.run.ts",
     "website/scripts/**/*.ts",
-    "packages/ramose/src/**/*.ts",
-    "packages/ramose/test/**/*.ts",
+    "packages/ramosedb/src/**/*.ts",
+    "packages/ramosedb/test/**/*.ts",
     "bench/**/*.ts",
     "scripts/**/*.ts",
     "test/**/*.ts",

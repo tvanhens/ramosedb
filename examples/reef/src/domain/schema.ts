@@ -13,7 +13,7 @@ import {
   string,
   timestamp,
   type ValueOf,
-} from "ramose/db";
+} from "ramosedb/db";
 import { RANK_GAP } from "./rank.ts";
 import { isWorkspaceSlug } from "./shared.ts";
 

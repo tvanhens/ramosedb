@@ -1,10 +1,10 @@
 ---
 title: React hooks
-description: Reference for observing Ramose queries, synchronization, entity state, and receipts from concurrent React applications.
+description: Reference for observing RamoseDB queries, synchronization, entity state, and receipts from concurrent React applications.
 ---
 import Next from "../../../components/Next.astro";
 
-`ramose/react` adapts the framework-neutral browser client to React's external-store contract. It adds no cache or query semantics of its own.
+`ramosedb/react` adapts the framework-neutral browser client to React's external-store contract. It adds no cache or query semantics of its own.
 
 *New here? Start with [React and offline UX](/guides/react/).*
 
@@ -16,10 +16,10 @@ import {
   useReceipt,
   useSuspenseQuery,
   useSyncState,
-} from "ramose/react"
+} from "ramosedb/react"
 ```
 
-`QueryState` and `ReceiptView` are exported here. Import the underlying `ReceiptState` from `ramose/client`.
+`QueryState` and `ReceiptView` are exported here. Import the underlying `ReceiptState` from `ramosedb/client`.
 
 ## RamoseProvider
 
@@ -146,7 +146,7 @@ Returns the client connection and catch-up state independently from any query. R
 
 ## Server rendering
 
-Browser database handles depend on IndexedDB and belong in Client Components. Server Components may execute explicit server queries through the server API, but Ramose does not serialize a browser replica into HTML or maintain a hidden SSR result cache.
+Browser database handles depend on IndexedDB and belong in Client Components. Server Components may execute explicit server queries through the server API, but RamoseDB does not serialize a browser replica into HTML or maintain a hidden SSR result cache.
 
 <Next links={[
   { href: "/reference/client-api/", label: "Browser client", why: "understand the framework-neutral state behind the hooks" },

@@ -91,15 +91,15 @@ import {
 import { operationMetadata } from "./operation-support.ts";
 
 // @ts-expect-error
-import type { PolicyTemplateIR as _PublicTemplate } from "ramose";
+import type { PolicyTemplateIR as _PublicTemplate } from "ramosedb";
 // @ts-expect-error
-import type { InstalledAuthorizationIR as _PublicInstalled } from "ramose/db";
+import type { InstalledAuthorizationIR as _PublicInstalled } from "ramosedb/db";
 // @ts-expect-error
-import type { InstalledCatalogUnit as _PublicCatalogUnit } from "ramose";
+import type { InstalledCatalogUnit as _PublicCatalogUnit } from "ramosedb";
 // @ts-expect-error
-import type { InstalledCatalogUnit as _PublicCatalogUnitDb } from "ramose/db";
+import type { InstalledCatalogUnit as _PublicCatalogUnitDb } from "ramosedb/db";
 
-type PublicKeys = keyof typeof import("ramose");
+type PublicKeys = keyof typeof import("ramosedb");
 export type _noPublicAuthorization = Expect<
   Equal<
     Extract<

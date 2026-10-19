@@ -1,6 +1,6 @@
 ---
 title: Authorization
-description: How Ramose filters immutable database values, grants exact operations, and seals metadata.
+description: How RamoseDB filters immutable database values, grants exact operations, and seals metadata.
 ---
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
@@ -17,7 +17,7 @@ Trusted routing selects a server-owned database and catalog. Callers cannot comb
 
 ## Filtering precedes query semantics
 
-Ramose compiles code-defined read rules into a predicate over facts. The current, historical, or history view is filtered first. Query, relation traversal, pull, aggregate, ordering, limit, and live synchronization operate only on the filtered result.
+RamoseDB compiles code-defined read rules into a predicate over facts. The current, historical, or history view is filtered first. Query, relation traversal, pull, aggregate, ordering, limit, and live synchronization operate only on the filtered result.
 
 That order prevents hidden data from changing visible answers indirectly. A hidden row cannot alter a count, make a negative condition fail, displace a visible row from a limit, or reveal itself through a missing reference.
 

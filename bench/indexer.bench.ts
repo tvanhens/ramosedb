@@ -1,6 +1,6 @@
-import { Schema, type Datom, ValueTag, FIRST_USER_EID, attributeDatoms, bootstrapDatoms, buildRoots, gzipCodec, reachable, treeDepth } from "../packages/ramose/src/internal/core/index.ts";
-import { R2NodeStore, dbPrefix, prefixedBucket, publishRoot, recordToRoots, rootsToRecord } from "../packages/ramose/src/internal/storage/index.ts";
-import { MemoryBucket } from "../packages/ramose/src/internal/storage/memory.ts";
+import { Schema, type Datom, ValueTag, FIRST_USER_EID, attributeDatoms, bootstrapDatoms, buildRoots, gzipCodec, reachable, treeDepth } from "../packages/ramosedb/src/internal/core/index.ts";
+import { R2NodeStore, dbPrefix, prefixedBucket, publishRoot, recordToRoots, rootsToRecord } from "../packages/ramosedb/src/internal/storage/index.ts";
+import { MemoryBucket } from "../packages/ramosedb/src/internal/storage/memory.ts";
 import { BenchHarness } from "./transactor-harness.ts";
 import { fmt } from "./lib.ts";
 

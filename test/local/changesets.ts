@@ -1,9 +1,9 @@
-import { DB_TX_INSTANT } from "../../packages/ramose/src/internal/core/schema.ts";
+import { DB_TX_INSTANT } from "../../packages/ramosedb/src/internal/core/schema.ts";
 import { beforeAll, describe, expect, test } from "bun:test";
 import * as Effect from "effect/Effect";
-import { lowerOwnedOperations } from "../../packages/ramose/src/internal/authorization/authoring/operations.ts";
-import { CatalogId, DigestHex } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import { signToken } from "../../packages/ramose/test/sign-local-token.ts";
+import { lowerOwnedOperations } from "../../packages/ramosedb/src/internal/authorization/authoring/operations.ts";
+import { CatalogId, DigestHex } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import { signToken } from "../../packages/ramosedb/test/sign-local-token.ts";
 import { OperationSchema } from "./operation-catalog.ts";
 import { json, testAdmin, type LocalUrls } from "./fixtures.ts";
 

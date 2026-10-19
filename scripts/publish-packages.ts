@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { $ } from "bun";
 
-const PACKAGE_DIR = "packages/ramose";
+const PACKAGE_DIR = "packages/ramosedb";
 
 const { values } = parseArgs({
   args: process.argv.slice(2),

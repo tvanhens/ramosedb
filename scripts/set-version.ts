@@ -23,7 +23,7 @@ if (!isReleaseVersion(version)) {
   process.exit(1);
 }
 
-const manifests = ["package.json", "packages/ramose/package.json"];
+const manifests = ["package.json", "packages/ramosedb/package.json"];
 const lockBefore = readFileSync("bun.lock", "utf8");
 const lockAfter = updateLockfileVersion(lockBefore, version);
 

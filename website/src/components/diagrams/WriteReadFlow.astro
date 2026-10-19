@@ -20,9 +20,9 @@ const accent = "var(--rg-green, #ff6500)";
     font-size="14"
     fill="currentColor"
   >
-    <title id="wrf-title">How a write becomes a read in Ramose</title>
+    <title id="wrf-title">How a write becomes a read in RamoseDB</title>
     <desc id="wrf-desc">
-      Your app sends a write to the Ramose server. The server checks the token
+      Your app sends a write to the RamoseDB server. The server checks the token
       and the rules and hands the write to the writer, one per database. The
       writer commits it in order and stores every version in object storage.
       Read copies learn the new version and every open tab is told within about
@@ -52,7 +52,7 @@ const accent = "var(--rg-green, #ff6500)";
       <text x="87.5" y="66" font-weight="600">your app</text>
       <text x="87.5" y="87" font-size="13" opacity="0.8">browser or Worker</text>
 
-      <text x="304.5" y="66" font-weight="600">the Ramose server</text>
+      <text x="304.5" y="66" font-weight="600">the RamoseDB server</text>
       <text x="304.5" y="87" font-size="13" opacity="0.8">serves every database</text>
 
       <text x="522.5" y="66" font-weight="600">the writer</text>

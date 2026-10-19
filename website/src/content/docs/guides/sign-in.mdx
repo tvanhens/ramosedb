@@ -5,16 +5,16 @@ description: Connect an OAuth or JWT issuer, configure verification and audience
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
 
-Ramose verifies identities; it does not manage passwords or issue user sessions. Bring an OAuth/OIDC provider or another signer that publishes a JSON Web Key Set.
+RamoseDB verifies identities; it does not manage passwords or issue user sessions. Bring an OAuth/OIDC provider or another signer that publishes a JSON Web Key Set.
 
-<Learn learn={["Which JWT fields Ramose verifies", "How web and MCP clients obtain the same principal identity", "How token changes interact with offline caches and database access"]} before={[{ href: "/guides/permissions/", label: "Permissions" }]} minutes={10} />
+<Learn learn={["Which JWT fields RamoseDB verifies", "How web and MCP clients obtain the same principal identity", "How token changes interact with offline caches and database access"]} before={[{ href: "/guides/permissions/", label: "Permissions" }]} minutes={10} />
 
 ## Browser credential provider
 
 Use the browser entry with your authenticated Better Auth user ID:
 
 ```ts
-import { createAuthProvider } from "ramose/better-auth/client"
+import { createAuthProvider } from "ramosedb/better-auth/client"
 
 const credentials = createAuthProvider({ userId: session.user.id })
 const client = createClient({
@@ -54,7 +54,7 @@ import {
   createServer,
   createTransactorDO,
   deployOperationCatalogs,
-} from "ramose/worker"
+} from "ramosedb/worker"
 import { deployment } from "./domain"
 
 const operationCatalogs = await Effect.runPromise(
@@ -66,9 +66,9 @@ export { QueryReplicaDO }
 export const TransactorDO = createTransactorDO(operationCatalogs)
 ```
 
-Ramose verifies signature, issuer, audience, expiry, and configured maximum lifetime. The subject identifies the principal deployment-wide. Authentication alone grants access to nothing.
+RamoseDB verifies signature, issuer, audience, expiry, and configured maximum lifetime. The subject identifies the principal deployment-wide. Authentication alone grants access to nothing.
 
-Use `jwksJson` for a pinned local or isolated environment. Use `jwksService` when the issuer is another Worker reached through a service binding. Never place private signing keys in the Ramose Worker.
+Use `jwksJson` for a pinned local or isolated environment. Use `jwksService` when the issuer is another Worker reached through a service binding. Never place private signing keys in the RamoseDB Worker.
 
 ## Supply tokens to the browser
 
@@ -87,7 +87,7 @@ const client = createClient({
 })
 ```
 
-The callback may refresh a short-lived token. When the principal changes, Ramose closes the previous synchronization scope and purges or quarantines its browser partition before rendering the next principal's data.
+The callback may refresh a short-lived token. When the principal changes, RamoseDB closes the previous synchronization scope and purges or quarantines its browser partition before rendering the next principal's data.
 
 ## Map the principal into schema data
 

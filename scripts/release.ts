@@ -51,7 +51,7 @@ if (requestedVersion && !isReleaseVersion(requestedVersion)) {
 }
 
 const manifestVersion = () =>
-  (JSON.parse(readFileSync("packages/ramose/package.json", "utf8")) as { version: string }).version;
+  (JSON.parse(readFileSync("packages/ramosedb/package.json", "utf8")) as { version: string }).version;
 
 const versionBefore = manifestVersion();
 const version = requestedVersion ?? versionBefore;

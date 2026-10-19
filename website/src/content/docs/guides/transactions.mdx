@@ -123,7 +123,7 @@ A queued invocation that pins an older version is refused with `operation_change
 
 Receipts expose queued, committed, and rejected transitions plus the stable public result. Treat `queued` as durable local acceptance, not server success. Treat `committed` as authoritative.
 
-If transport fails after submission, reuse the same receipt and invocation identity. Do not create a new invocation for the same intent. Ramose returns the original result for an identical retry and a conflict for changed input.
+If transport fails after submission, reuse the same receipt and invocation identity. Do not create a new invocation for the same intent. RamoseDB returns the original result for an identical retry and a conflict for changed input.
 
 <Next links={[
   { href: "/guides/permissions/", label: "Grant operations", why: "separate exact invoke permission from target readability" },

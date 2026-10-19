@@ -1,4 +1,4 @@
-import type { EntityHandleFor } from "ramose/client";
+import type { EntityHandleFor } from "ramosedb/client";
 import { Issue, Person } from "../domain/schema.ts";
 
 export type IssueRow = EntityHandleFor<typeof Issue>;

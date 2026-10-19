@@ -3,7 +3,7 @@
 import { copyFile, rm } from "node:fs/promises";
 import { $ } from "bun";
 
-const PACKAGE = "packages/ramose";
+const PACKAGE = "packages/ramosedb";
 
 const clean = process.argv.includes("--clean");
 
@@ -14,7 +14,7 @@ if (clean) {
 
 const started = performance.now();
 await $`bunx tsc -p ${PACKAGE}/tsconfig.build.json`;
-console.log(`built ramose (${Math.round(performance.now() - started)}ms)`);
+console.log(`built ramosedb (${Math.round(performance.now() - started)}ms)`);
 
 await copyFile("LICENSE", `${PACKAGE}/LICENSE`);
 await copyFile("NOTICE", `${PACKAGE}/NOTICE`);

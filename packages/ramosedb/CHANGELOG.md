@@ -1,6 +1,16 @@
-# ramose
+# ramosedb
 
 ## Unreleased
+
+### Renamed to `ramosedb`
+
+The package is now published as `ramosedb`. Replace `ramose` with
+`ramosedb` in your dependencies and import paths: `ramosedb`,
+`ramosedb/db`, `ramosedb/client`, `ramosedb/react`, `ramosedb/worker`,
+`ramosedb/better-auth`, and `ramosedb/better-auth/client`. Exported
+names, schema attributes such as `ramose/type`, and the `x-ramose-*`
+protocol headers are unchanged. The `ramose` package is deprecated and
+receives no further releases.
 
 ### `Q.call` and or-join projections keep one row per source (part of #305)
 

@@ -1,25 +1,25 @@
 import { expect } from "vitest";
-import { Index, ValueTag } from "../../packages/ramose/src/internal/core/datom.ts";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import type { Db } from "../../packages/ramose/src/internal/core/db.ts";
-import type { AttributeSpec } from "../../packages/ramose/src/internal/core/schema.ts";
+import { Index, ValueTag } from "../../packages/ramosedb/src/internal/core/datom.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import type { Db } from "../../packages/ramosedb/src/internal/core/db.ts";
+import type { AttributeSpec } from "../../packages/ramosedb/src/internal/core/schema.ts";
 import {
   IndexedDbReplicaStorage,
   REPLICA_DATABASE_VERSION,
   replicaPartitionKey,
-} from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+} from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import type {
   Change,
   LogicalDatom,
   ReplicationIdentity,
   SnapshotDatom,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
 import { browserTest } from "./fixtures.ts";
 import {
   changeFrame,
   sealedHandle,
   snapshotChunk,
-} from "../../packages/ramose/test/replication-fixtures.ts";
+} from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const opaque = (character: string): string => character.repeat(43);
 

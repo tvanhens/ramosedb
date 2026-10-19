@@ -4,7 +4,7 @@ description: Reference for named schemas, entities, traits, fields, relationship
 ---
 import Next from "../../../components/Next.astro";
 
-This page summarizes the declaration surface exported by `ramose/db`. Definitions are immutable values; declare and export them at module scope.
+This page summarizes the declaration surface exported by `ramosedb/db`. Definitions are immutable values; declare and export them at module scope.
 
 *New here? Start with [Schemas and traits](/guides/catalog/).*
 
@@ -39,7 +39,7 @@ const Task = Ramose.Entity("task", {
 })
 ```
 
-An entity definition gives stored records a type, fields, traits, relationships, and owned operations. Ramose supplies stable entity identity separately from user fields.
+An entity definition gives stored records a type, fields, traits, relationships, and owned operations. RamoseDB supplies stable entity identity separately from user fields.
 
 ## Trait
 

@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, test } from "bun:test";
-import { MAX_REPLICATION_REVISIONS_PER_SCOPE } from "../../packages/ramose/src/internal/replica/revision-retention.ts";
+import { MAX_REPLICATION_REVISIONS_PER_SCOPE } from "../../packages/ramosedb/src/internal/replica/revision-retention.ts";
 import { CONFORMANCE_DATABASES } from "./conformance-catalog.ts";
 import { loadConformanceProof } from "./conformance-proof.ts";
 import { seedWorld } from "./conformance.ts";

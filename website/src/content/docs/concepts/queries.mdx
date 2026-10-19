@@ -5,7 +5,7 @@ description: How one portable query value powers local React views, server reads
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
 
-A Ramose query is inert, serializable data. Building one performs no read. The TypeScript builder and `QueryDocumentV1` are two authoring surfaces for the same normalized query plan.
+A RamoseDB query is inert, serializable data. Building one performs no read. The TypeScript builder and `QueryDocumentV1` are two authoring surfaces for the same normalized query plan.
 
 <Learn learn={["How roots, filters, projections, and cardinality shape a result", "Why app queries run locally while MCP queries run on the server", "Where query cost comes from"]} before={[{ href: "/concepts/data-model/", label: "Data model" }]} minutes={9} />
 
@@ -24,7 +24,7 @@ An entity root returns that concrete type. A trait root returns every readable c
 
 Filters constrain candidate rows. Equality, ranges, sets, boolean combinations, relation paths, and nested existence all compile into the portable query. Indexed equality and range constraints reduce work early; late string predicates and broad negative conditions usually scan more.
 
-Authorization is not a query rewrite. Ramose first constructs the principal's filtered immutable database, then runs the same query engine. Hidden facts cannot participate in joins, ordering, negation, aggregates, or limits.
+Authorization is not a query rewrite. RamoseDB first constructs the principal's filtered immutable database, then runs the same query engine. Hidden facts cannot participate in joins, ordering, negation, aggregates, or limits.
 
 ## Projection defines the result contract
 

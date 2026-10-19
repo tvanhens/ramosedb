@@ -56,18 +56,18 @@ export const typeExports = (src) => {
 };
 
 export const dbErrorTags = () => {
-  const src = read("packages/ramose/src/db/Errors.ts");
+  const src = read("packages/ramosedb/src/db/Errors.ts");
   const m = src.match(/export type DbError\s*=\s*([\s\S]*?);/);
   if (!m) throw new Error("DbError union not found in Errors.ts");
   return [...m[1].matchAll(/\|\s*(\w+)/g)].map((x) => x[1]);
 };
 
 export const ramoseDbRuntime = () =>
-  runtimeExports(read("packages/ramose/src/db/index.ts"));
+  runtimeExports(read("packages/ramosedb/src/db/index.ts"));
 
 export const ramoseRootRuntime = () => {
   const db = ramoseDbRuntime();
-  const root = runtimeExports(read("packages/ramose/src/index.ts"));
+  const root = runtimeExports(read("packages/ramosedb/src/index.ts"));
   const added = new Set();
   for (const n of root) if (!db.has(n)) added.add(n);
   return { all: new Set([...db, ...root]), added, db };

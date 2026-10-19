@@ -15,14 +15,14 @@ import {
   Ref,
   Schema,
   string,
-} from "../../packages/ramose/src/db/internal.ts";
+} from "../../packages/ramosedb/src/db/internal.ts";
 import {
   createClient,
   type Client,
   type ClientDatabase,
   type Receipt,
-} from "../../packages/ramose/src/client/index.ts";
-import { installClientCatalog } from "../../packages/ramose/src/client/catalog.ts";
+} from "../../packages/ramosedb/src/client/index.ts";
+import { installClientCatalog } from "../../packages/ramosedb/src/client/catalog.ts";
 import {
   RamoseProvider,
   useDb,
@@ -32,26 +32,26 @@ import {
   useSyncState,
   type QueryState,
   type ReceiptView,
-} from "../../packages/ramose/src/react/index.ts";
+} from "../../packages/ramosedb/src/react/index.ts";
 import {
   heldStoreCount,
   UNCLAIMED_LIMIT,
-} from "../../packages/ramose/src/react/store.ts";
-import { suspendedQueryCount } from "../../packages/ramose/src/react/suspense.ts";
-import { IndexedDbReplicaStorage } from "../../packages/ramose/src/internal/replication/indexeddb.ts";
+} from "../../packages/ramosedb/src/react/store.ts";
+import { suspendedQueryCount } from "../../packages/ramosedb/src/react/suspense.ts";
+import { IndexedDbReplicaStorage } from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
 import type {
   ReplicationIdentity,
   SnapshotDatom,
-} from "../../packages/ramose/src/internal/replication/protocol.ts";
-import { rootReplicaRouteSlot } from "../../packages/ramose/src/internal/replication/route-slot.ts";
+} from "../../packages/ramosedb/src/internal/replication/protocol.ts";
+import { rootReplicaRouteSlot } from "../../packages/ramosedb/src/internal/replication/route-slot.ts";
 import {
   replicationActivationAddress,
   replicationCacheSelector,
   replicationCredentialFingerprint,
-} from "../../packages/ramose/src/internal/replication/transport.ts";
+} from "../../packages/ramosedb/src/internal/replication/transport.ts";
 import recorded from "./frames/optimistic-fence.client.json";
 import { browserTest } from "./fixtures.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 declare global {
   // eslint-disable-next-line no-var

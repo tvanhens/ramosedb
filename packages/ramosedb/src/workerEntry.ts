@@ -1,4 +1,4 @@
-const PEER_ENTRY = "ramose/worker";
+const PEER_ENTRY = "ramosedb/worker";
 
 export const workerEntry = (): string => {
   try {

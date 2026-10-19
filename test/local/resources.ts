@@ -1,5 +1,5 @@
 import * as Cloudflare from "alchemy/Cloudflare";
-import * as Ramose from "ramose";
+import * as Ramose from "ramosedb";
 import { AUD, ISS, JWKS } from "./auth-keys.ts";
 import { Open } from "./open.ts";
 import { TEST_HOOKS_ENV } from "./test-hooks-env.ts";

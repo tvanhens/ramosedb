@@ -1,5 +1,5 @@
-import { fromJson, toJson } from "../../packages/ramose/src/internal/core/json.ts";
-import type { TxData } from "../../packages/ramose/src/internal/core/tx.ts";
+import { fromJson, toJson } from "../../packages/ramosedb/src/internal/core/json.ts";
+import type { TxData } from "../../packages/ramosedb/src/internal/core/tx.ts";
 
 export interface PeerOptions {
 

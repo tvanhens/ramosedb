@@ -1,5 +1,5 @@
 import * as S from "effect/Schema";
-import * as Ramose from "ramose/db";
+import * as Ramose from "ramosedb/db";
 
 export const User = Ramose.Entity("user", {
   name: Ramose.Field.unique(Ramose.string(), "upsert"),

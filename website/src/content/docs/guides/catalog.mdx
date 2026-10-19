@@ -1,6 +1,6 @@
 ---
 title: Schemas and traits
-description: Define entities, fields, relations, traits, documentation, defaults, and stable identities for a Ramose catalog.
+description: Define entities, fields, relations, traits, documentation, defaults, and stable identities for a RamoseDB catalog.
 ---
 import Learn from "../../../components/Learn.astro";
 import Next from "../../../components/Next.astro";
@@ -12,7 +12,7 @@ The schema is the durable vocabulary of the database. Spend time on names, ident
 ## Define entities
 
 ```ts
-import * as Ramose from "ramose/db"
+import * as Ramose from "ramosedb/db"
 
 export const User = Ramose.Entity("user", {
   authId: Ramose.Field.unique(Ramose.string(), "strict", {
@@ -110,7 +110,7 @@ Write `doc` text as a contract: state the business meaning, valid unit, safety i
 
 Usually additive: a new entity, trait, operation, optional field, index, or documentation. Potentially incompatible: changing value type, cardinality, unique semantics, ownership, fixed binding, concrete type meaning, or reusing a stable operation key for different behavior.
 
-Ramose applies the current deployed catalog to current and historical facts. Recataloging a database is unsupported. Plan incompatible changes as a fresh database or an explicit application migration.
+RamoseDB applies the current deployed catalog to current and historical facts. Recataloging a database is unsupported. Plan incompatible changes as a fresh database or an explicit application migration.
 
 <Next links={[
   { href: "/guides/queries/", label: "Read data", why: "turn fields and relations into result shapes" },

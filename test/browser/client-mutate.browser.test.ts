@@ -6,22 +6,22 @@ import {
   Ref,
   Schema,
   string,
-} from "../../packages/ramose/src/db/internal.ts";
-import { ReadCompatibilityHash } from "../../packages/ramose/src/internal/authorization/identities.ts";
-import { createClient, type Client } from "../../packages/ramose/src/client/index.ts";
-import { installClientCatalog } from "../../packages/ramose/src/client/catalog.ts";
-import { IndexedDbReplicaStorage } from "../../packages/ramose/src/internal/replication/indexeddb.ts";
-import type { ReplicationIdentity } from "../../packages/ramose/src/internal/replication/protocol.ts";
-import { rootReplicaRouteSlot } from "../../packages/ramose/src/internal/replication/route-slot.ts";
+} from "../../packages/ramosedb/src/db/internal.ts";
+import { ReadCompatibilityHash } from "../../packages/ramosedb/src/internal/authorization/identities.ts";
+import { createClient, type Client } from "../../packages/ramosedb/src/client/index.ts";
+import { installClientCatalog } from "../../packages/ramosedb/src/client/catalog.ts";
+import { IndexedDbReplicaStorage } from "../../packages/ramosedb/src/internal/replication/indexeddb.ts";
+import type { ReplicationIdentity } from "../../packages/ramosedb/src/internal/replication/protocol.ts";
+import { rootReplicaRouteSlot } from "../../packages/ramosedb/src/internal/replication/route-slot.ts";
 import {
   replicationActivationAddress,
   replicationCredentialFingerprint,
-} from "../../packages/ramose/src/internal/replication/transport.ts";
-import { replicaScopeOf } from "../../packages/ramose/src/internal/replication/replica-lifecycle.ts";
-import { isInvocationId } from "../../packages/ramose/src/db/refs.ts";
-import { Query as PortableQuery } from "../../packages/ramose/src/db/internal.ts";
+} from "../../packages/ramosedb/src/internal/replication/transport.ts";
+import { replicaScopeOf } from "../../packages/ramosedb/src/internal/replication/replica-lifecycle.ts";
+import { isInvocationId } from "../../packages/ramosedb/src/db/refs.ts";
+import { Query as PortableQuery } from "../../packages/ramosedb/src/db/internal.ts";
 import { browserTest } from "./fixtures.ts";
-import { snapshotChunk } from "../../packages/ramose/test/replication-fixtures.ts";
+import { snapshotChunk } from "../../packages/ramosedb/test/replication-fixtures.ts";
 
 const Person = Entity("person", { name: string() });
 

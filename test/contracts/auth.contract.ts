@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { signToken } from "../../packages/ramose/test/sign-local-token.ts";
+import { signToken } from "../../packages/ramosedb/test/sign-local-token.ts";
 import { SHARED_TOKEN } from "../local/auth-keys.ts";
 import { json, post, uniqueDb, type LocalUrls } from "../local/fixtures.ts";
 

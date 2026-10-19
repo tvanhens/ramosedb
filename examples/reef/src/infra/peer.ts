@@ -4,7 +4,7 @@ import {
   createServer,
   createTransactorDO,
   deployOperationCatalogs,
-} from "ramose/worker";
+} from "ramosedb/worker";
 import { deployment } from "../domain/schema.ts";
 
 const operationCatalogs = await Effect.runPromise(

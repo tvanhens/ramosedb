@@ -1,6 +1,6 @@
 # Todos
 
-The smallest Ramose peer example: a named schema, typed operations, an open
+The smallest RamoseDB peer example: a named schema, typed operations, an open
 read policy, and a local Alchemy stack. It does not configure authentication.
 
 ## Run it
@@ -24,7 +24,7 @@ credentials the local emulator wants (see `.cursor/CLOUD.md`).
 
 | file | what it is |
 |---|---|
-| `schema.ts` | the schema and owned operations, authored with `ramose/db` |
+| `schema.ts` | the schema and owned operations, authored with `ramosedb/db` |
 | `resources.ts` / `alchemy.run.ts` | the local peer deployment |
 | `src/todos.ts` | a reusable `Ramose.Query.from` projection |
 | `peer.ts` | the Worker entry |
