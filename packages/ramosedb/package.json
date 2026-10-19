@@ -1,6 +1,6 @@
 {
   "name": "ramosedb",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "description": "RamoseDB — an immutable, Datomic-inspired graph database for Cloudflare (Workers + Durable Objects + R2), built on Effect. One package: portable authoring (`ramosedb/db`), Alchemy resources (`ramosedb`), the offline-first browser client (`ramosedb/client`), its React adapter (`ramosedb/react`), the peer Worker (`ramosedb/worker`) and the Better Auth plugin (`ramosedb/better-auth`).",
   "license": "Apache-2.0",

@@ -1,6 +1,6 @@
 {
   "name": "ramosedb-monorepo",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "description": "Development workspace for RamoseDB. The published package is `packages/ramosedb` (npm: `ramosedb`); this manifest is private and never ships.",
   "license": "Apache-2.0",
